@@ -7,7 +7,7 @@ import math
 class TransformerConfig:
     source_vocab_size: int 
     target_vocab_size: int 
-    source_sequence_length: int 
+    source_sequence_length: int  
     target_sequence_length: int
     d_model: int = 512 # the dimension of the model
     layers: int = 6 
