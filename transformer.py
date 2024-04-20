@@ -13,7 +13,7 @@ class TransformerConfig:
     layers: int = 6 
     heads: int = 8
     dropout: float = 0.1 
-    d_ff: int = 2048 # dimension of the feedforward block 
+    d_ff: int = 2048 # dimension of the feedforward block  
 
 class SentenceEmbeddingLayer(nn.Module):
     def __init__(self, d_model: int, vocab_size: int) -> None:
