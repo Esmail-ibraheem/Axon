@@ -16,7 +16,7 @@ class TransformerConfig:
     d_ff: int = 2048 # dimension of the feedforward block  
 
 class SentenceEmbeddingLayer(nn.Module):
-    def __init__(self, d_model: int, vocab_size: int) -> None:
+    def __init__(self, d_model: int, vocab_size: int) -> None: 
         super().__init__() 
         self.d_model = d_model
         self.vocab_size = vocab_size
