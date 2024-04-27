@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
  
 @dataclass 
-class TransformerConfig:
+class TransformerConfig: 
     source_vocab_size: int 
     target_vocab_size: int  
     source_sequence_length: int 
