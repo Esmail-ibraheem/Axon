@@ -1,6 +1,3 @@
 # Trainer
 
-
-
-
-llama2 implementation and refactoring the transformer model from scratch using pytorch. 
+implementing the reinforcement learning from human feedback algorithms: Proximal Policy Optimization, Direct Preference Optimization, and Supervised fine-tuning algorithms from scratch 
