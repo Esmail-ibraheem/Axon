@@ -1,3 +1,3 @@
 # 🧠 Axon 🔬
 
-# <center style="font-family: consolas; font-size: 32px; font-weight: bold;">  AI research Lab. </center>
+<h2 align="center">This is a centered and bold heading</h2>
