@@ -32,3 +32,9 @@ Indeed, RNNs tend to be slow and can struggle with handling large datasets, whic
 
 The transformer Neural Network (TNN) introduced a breakthrough solution called "Self-Attention" in the paper "Attention is All You Need." This innovation addressed these issues and paved the way for subsequent advancements such as GPT, Bert, **Llama**, stable diffusion, and more.
 
+so first we have the left architecture which is the "encoder" and the right is the "decoder":
+
+1. **Input Embeddings:**  
+	- Word Embedding: Represent each word as a “vector” of numbers
+	
+    The input sequence is transformed into fixed-dimensional embeddings, typically composed of word embeddings and positional encodings. Word embeddings capture the semantic meaning of each word.
