@@ -147,5 +147,6 @@ The final layer of the decoder is a linear projection followed by a softmax acti
 The softmax function is a mathematical function that converts a vector of K real numbers into a probability distribution of K possible outcomes. It is a generalization of the logistic function to multiple dimensions, and used in multinomial logistic regression. The softmax function is often used as the last activation function of a neural network to normalize the output of a network to a probability distribution over predicted output classes. The formula for the standard (unit) softmax function is as follows:
 $$\sigma(\mathbf{z})_j = \frac{e^{z_j}}{\sum_{k=1}^K e^{z_k}}$$
 ​
+
 ### Linear 
 convert the embeddings to word again (**_it just has weights not biases._**) 
