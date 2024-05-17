@@ -86,3 +86,33 @@ Trigonometric functions like cos and sin naturally represent a pattern that the 
    	    		<p align="center">
 			  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/attention op3.png" alt="Your Image Description" >
 			</p>
+---
+
+### self attention mechanism:
+
+The core of the Transformer model is the self-attention mechanism. It allows each word in the input sequence to attend to all other words, capturing their relevance and influence. Self-attention computes three vectors for each word: Query, Key, and Value.
+
+- Allows to “focus attention” on particular aspects of the input text
+
+- Done by using a set of parameters, called "weights," that determine how much attention should be paid to each input at each time step
+
+- These weights are computed using a combination of the input and the current hidden state of the model
+
+- Attention weights are computed (dot product of the query, key and value matrix), then a Softmax function is applied to the dot product
+
+ - Query (Q): Each word serves as a query to compute the attention scores.
+	- Q: what I am looking for.
+ - Key (K): Each word acts as a key to determine its relevance to other words.
+	 - K: what I can offer.
+ - Value (V): Each word contributes as a value to the attention-weighted sum.
+	  - what I actually offer.
+
+ ### Analogy for Q, K, V:
+
+Library system
+
+Imagine you're looking for information on a specific topic (query)
+
+Each book in the library has a summary (key) that helps identify if it contains the information you're looking for
+
+Once you find a match between your query and a summary, you access the book to get the detailed information (value) you need
