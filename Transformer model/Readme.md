@@ -125,3 +125,17 @@ Once you find a match between your query and a summary, you access the book to g
 	<img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/q (2).png" alt="Your Image Description" >
 </p>
 
+---
+
+<p align="center">
+	<img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/heads.png" alt="Your Image Description" >
+</p>
+
+Attention vector for every word using this formula: 
+$$Z = \text{softmax}\left(\frac{QK^T}{\sqrt{\text{Dimension of vector } Q, K \text{ or } V}}\right)V$$
+Self-attention is calculated by taking the dot product of the query and key, scaled by a factor, and applying a Softmax function to obtain attention weights. These attention weights determine the importance of each word's value for the current word. 
+$$\text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+$$\text{self attention} = \text{softmax}\left(\frac{QK^T}{\sqrt{d_{\text{model}}}}+M\right)$$
+### Output:
+
+The final layer of the decoder is a linear projection followed by a softmax activation function. It produces a probability distribution over the vocabulary, allowing the model to generate the output word by sampling from this distribution.
