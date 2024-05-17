@@ -61,3 +61,7 @@ Trigonometric functions like cos and sin naturally represent a pattern that the 
     The Transformer model consists of an encoder and a decoder. Both the encoder and decoder are composed of multiple layers. Each layer has two sub-layers: a multi-head self-attention mechanism and a feed-forward neural network.
     
       - **_Encoder:_** The encoder takes the input sequence and processes it through multiple layers of self-attention and feed-forward networks. It captures the contextual information of each word based on the entire sequence.
+	        <p align="center">
+		  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/encoder.png" alt="Your Image Description" >
+		</p>
+      - **_Decoder:_** The decoder generates the output sequence word by word, attending to the encoded input sequence's relevant parts. It also includes an additional attention mechanism called "encoder-decoder attention" that helps the model focus on the input during decoding.
