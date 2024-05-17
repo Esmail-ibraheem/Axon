@@ -80,9 +80,9 @@ Trigonometric functions like cos and sin naturally represent a pattern that the 
 			</p>
 		- **_Masked Multi-head attention in the decoder block_:** the same as Multi-head  attention in the encoder block but this time for the translation sentence, is used to ensure that during the decoding process, each word can only attend to the words before it. This masking prevents the model from accessing future information, which is crucial for generating the output sequence step by step.
    	   		<p align="center">
-			  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/transformer op2.png" alt="Your Image Description" >
+			  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/attention op2.png" alt="Your Image Description" >
 			</p>
    	 	- **Multi-head attention in the decoder block_:** do the same as the Multi-head attention in the encoder block but between the input sentence and the translation sentence, is employed to capture different relationships between the input sequence and the generated output sequence. It allows the decoder to attend to different parts of the encoder's output and learn multiple representations of the context.
    	    		<p align="center">
-			  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/transformer op3.png" alt="Your Image Description" >
+			  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/attention op3.png" alt="Your Image Description" >
 			</p>
