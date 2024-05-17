@@ -50,3 +50,14 @@ $$\text{PE}(i,\delta) =
 \sin(\frac{i}{10000^{2\delta'/d}}) & \text{if } \delta = 2\delta'\\
 \cos(\frac{i}{10000^{2\delta'/d}}) & \text{if } \delta = 2\delta' + 1\\
 \end{cases}$$
+	<p align="center">
+	  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/pe2.png" alt="Your Image Description" >
+	</p>
+ ### Why trigonometric functions? 
+     
+     Trigonometric functions like cos and sin naturally represent a pattern that the model can recognize as continuous, so relative positions are easier to see for the model. By watching the plot of these functions, we can also see a regular pattern, so we can hypothesize that the model will see it too.
+
+3. **Encoder and Decoder:**  
+    The Transformer model consists of an encoder and a decoder. Both the encoder and decoder are composed of multiple layers. Each layer has two sub-layers: a multi-head self-attention mechanism and a feed-forward neural network.
+    
+      - **_Encoder:_** The encoder takes the input sequence and processes it through multiple layers of self-attention and feed-forward networks. It captures the contextual information of each word based on the entire sequence.
