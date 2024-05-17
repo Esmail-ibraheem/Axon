@@ -38,3 +38,6 @@ so first we have the left architecture which is the "encoder" and the right is t
 	- Word Embedding: Represent each word as a “vector” of numbers
 	
     The input sequence is transformed into fixed-dimensional embeddings, typically composed of word embeddings and positional encodings. Word embeddings capture the semantic meaning of each word.
+	<p align="center">
+	  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/embedding.png" alt="Your Image Description" >
+	</p>
