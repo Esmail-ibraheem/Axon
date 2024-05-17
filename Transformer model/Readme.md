@@ -45,8 +45,8 @@ so first we have the left architecture which is the "encoder" and the right is t
     	 <p align="center">
 	  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/pe1.png" alt="Your Image Description" >
 	</p>
- 	$$ \text{PE}(i,\delta) = 
+ 	$$\text{PE}(i,\delta) = 
 	\begin{cases}
 	\sin(\frac{i}{10000^{2\delta'/d}}) & \text{if } \delta = 2\delta'\\
 	\cos(\frac{i}{10000^{2\delta'/d}}) & \text{if } \delta = 2\delta' + 1\\
-	\end{cases} $$
+	\end{cases}$$
