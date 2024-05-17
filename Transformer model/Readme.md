@@ -21,3 +21,17 @@ In the translation task, the RNN analyzes each word ('I', 'work', 'at', 'the', '
 <p align="center">
   <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/rnn2.png" alt="Your Image Description" >
 </p>
+
+#### Problems with RNN:
+1. Slow computation for long sequences 
+2. Vanishing or exploding gradients 
+3. Difficulty in accessing information from a long time ago
+4. Complexity per layer: $ O(nd^2) $, meanwhile transformer's is $ O(n^2d) $
+
+Indeed, RNNs tend to be slow and can struggle with handling large datasets, which can lead to potential confusion or difficulties in processing extensive data. However, 
+
+The transformer Neural Network (TNN) introduced a breakthrough solution called "Self-Attention" in the paper "Attention is All You Need." This innovation addressed these issues and paved the way for subsequent advancements such as GPT, Bert, **Llama**, stable diffusion, and more.
+
+<p align="center">
+  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/Transformer%20model/assets/transformer%20architecture.png" alt="Your Image Description" >
+</p>
