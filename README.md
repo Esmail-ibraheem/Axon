@@ -1,3 +1,3 @@
 # 🧠 Axon 🔬
 
-<h2 align="center">This is a centered and bold heading</h2>
+<h2 align="center">AI research Lab.</h2>
