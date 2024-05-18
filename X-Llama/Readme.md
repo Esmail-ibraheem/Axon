@@ -70,11 +70,11 @@ The final output is derived by computing the weighted average over the value vec
 
 **The autoregressive nature of transformers**
 	
-	transformer-based models are **autoregressive models**, meaning essentially that they use the past to predict the future.
-	
-	Given a prompt $(x_1, …, x_n)$
-	
-	Since the tokens (𝑥1,…,𝑥𝑛) are all known, computing 𝑃(𝑥𝑛+1|𝑥1,…,𝑥𝑛) can be made with matrix-matrix multiplication and thus benefit from GPU parallelism.
+transformer-based models are **autoregressive models**, meaning essentially that they use the past to predict the future.
+
+Given a prompt $(x_1, …, x_n)$
+
+Since the tokens (𝑥1,…,𝑥𝑛) are all known, computing 𝑃(𝑥𝑛+1|𝑥1,…,𝑥𝑛) can be made with matrix-matrix multiplication and thus benefit from GPU parallelism.
 
 Instead, when we get to compute the remaining tokens 𝑃(𝑥𝑛+𝑡+1|𝑥1,…,𝑥𝑛+𝑡), the data dependency forces us to use a matrix-vector multiplication, which is less efficient and leads to an **underutilization of the GPU**.
 	
