@@ -1,4 +1,4 @@
-# [attention is all you need](https://arxiv.org/abs/1706.03762)
+# [attention is all you need](https://arxiv.org/abs/1706.03762), [Original repo](https://github.com/Esmail-ibraheem/LlTRA-Model)
 
 ### Transformers:
  
