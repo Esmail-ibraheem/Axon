@@ -67,3 +67,34 @@ where in the paper we have Θ=𝜃𝑖=10000−2(𝑖−1)/𝑑,𝑖∈[1,2,…
 	$$a_{ij} = \frac{\exp(q_i^T k_j / \sqrt{d_k})}{\sum_{t=1}^{i}\exp(q_i^T k_t / \sqrt{d_k})}$$
 The final output is derived by computing the weighted average over the value vectors:
 	$$o_i = \sum_{j=1}^{i} a_{ij} v_j$$
+
+**The autoregressive nature of transformers**
+	
+	transformer-based models are **autoregressive models**, meaning essentially that they use the past to predict the future.
+	
+	Given a prompt $(x_1, …, x_n)$
+	
+	Since the tokens (𝑥1,…,𝑥𝑛) are all known, computing 𝑃(𝑥𝑛+1|𝑥1,…,𝑥𝑛) can be made with matrix-matrix multiplication and thus benefit from GPU parallelism.
+
+	Instead, when we get to compute the remaining tokens 𝑃(𝑥𝑛+𝑡+1|𝑥1,…,𝑥𝑛+𝑡), the data dependency forces us to use a matrix-vector multiplication, which is less efficient and leads to an **underutilization of the GPU**.
+	
+	I**n the process we described above**, one can notice that the key and value vectors 𝑘1,…,𝑘𝑛+𝑡−1 and 𝑣1,…,𝑣𝑛+𝑡−1 seem to be re-computed every time a new token is taken into consideration. Of course, this would be a waste of resources.
+
+ Consider the below illustration:
+
+ The 𝐾 and 𝑉 matrices contain information about all the sequence, while the query vector contains just the information about the last token. The dot product between 𝑞 and 𝐾 corresponds to doing attention between the last token (i.e. “blue” in our example) and all the previous ones.
+
+	Note two things:
+	- during the sequence generation one token at a time, the two matrices 𝐾 and 𝑉 do not change very much
+	- once we computed the embedding for the new token, it’s not going to change, no matter how many more tokens we generate
+
+ That is why the key and value vectors of existing tokens are often cached for generating future tokens. This approach leads to what is called the **KV cache**. Note that the KV cache of one token depends on all its previous tokens, hence if we have the same token appearing in two different positions inside the sequence, the corresponding KV caches will be different as well.
+
+ **How much memory does KV cache use?**
+
+	Let’s consider a 13B parameter [OPT model](https://arxiv.org/pdf/2205.01068.pdf)
+	$memory\_usage\_per\_token = num\_vectors * hidden\_state\_size * num\_layers * precision\_(bytes) = 2 * 5120 * 40 * 2 = 800KB$
+	
+	where num_vectors refers to the key and value vectors.
+	
+	In OPT a sequence can be made of up to 2048 tokens, hence we would need 800∗2048≈1.6GB per single request.
