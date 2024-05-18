@@ -1,5 +1,8 @@
 > **Introduction**. Large Language Models (LLMs) have shown great promise as highly capable AI assistants that excel in complex reasoning tasks requiring expert knowledge across a wide range of fields, including in specialized domains such as programming and creative writing. They enable interaction with humans through intuitive chat interfaces, which has led to rapid and widespread adoption among the general public. The capabilities of LLMs are remarkable considering the seemingly straightforward nature of the training methodology. Auto-regressive transformers are pretrained on an extensive corpus of self-supervised data, followed by alignment with human preferences via techniques such as Reinforcement Learning with Human Feedback (RLHF). Although the training methodology is simple, high computational requirements have limited the development of LLMs to a few players. There have been public releases of pretrained LLMs (such as BLOOM(Scao et al., 2022), LLaMa-1 (Touvron et al., 2023), and Falcon (Penedo et al., 2023)) that match the performance of closed pretrained competitors like GPT-3 (Brown et al., 2020) and Chinchilla (Hoffmannet al., 2022), but none of these models are suitable substitutes for closed “product” LLMs, such as ChatGPT, BARD, and Claude. These closed product LLMs are heavily fine-tuned to align with human preferences, which greatly enhances their usability and safety. This step can require significant costs in compute and humanannotation, and is often not transparent or easily reproducible, limiting progress within the community to advance AI alignment research.
 
+<p align="center">
+  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/assets/Llama.png" alt="Your Image Description" >
+</p>
 ---
 
 1. RMS Normalization 
@@ -44,5 +47,8 @@ When generalizing to higher dimensional space, RoPE divide the 𝑑-dimensional
 ![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/4708c8a1-78ac-433d-89f5-56e6768dd840)
 where in the paper we have Θ=𝜃𝑖=10000−2(𝑖−1)/𝑑,𝑖∈[1,2,…,𝑑/2]. Note that this is essentially equivalent to sinusoidal positional encoding but formulated as a rotation matrix.
 
+<p align="center">
+  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/assets/RoPE.png" alt="Your Image Description" >
+</p>
 
 
