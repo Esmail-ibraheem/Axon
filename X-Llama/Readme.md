@@ -3,6 +3,7 @@
 <p align="center">
   <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/assets/Llama.png" alt="Your Image Description" >
 </p>
+
 ---
 
 1. RMS Normalization 
@@ -47,8 +48,20 @@ When generalizing to higher dimensional space, RoPE divide the 𝑑-dimensional
 ![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/4708c8a1-78ac-433d-89f5-56e6768dd840)
 where in the paper we have Θ=𝜃𝑖=10000−2(𝑖−1)/𝑑,𝑖∈[1,2,…,𝑑/2]. Note that this is essentially equivalent to sinusoidal positional encoding but formulated as a rotation matrix.
 
-<p align="center">
-  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/assets/RoPE.png" alt="Your Image Description" >
-</p>
+	<p align="center">
+	  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/assets/RoPE.png" alt="Your Image Description" >
+	</p>
 
 
+3. KV-Cache 
+	
+	Recall the definition of Attention given in the [“Attention Is All You Need”](https://arxiv.org/pdf/1706.03762.pdf) paper:
+
+	$$Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$$
+
+	where 𝑄, 𝐾, and 𝑉 are three matrices that are trained during the training process. The embeddings of each token (a vector) is multiplied by these three matrices to obtain three vectors 𝑞𝑛, 𝑘𝑛, and 𝑣𝑛.
+	
+	When computing self-attention, we compute the dot product of the query vector 𝑞𝑛 with the key vector of every other token before it in the input sequence $𝑘_𝑛,𝑘_{𝑛+1},…,𝑘_𝑁$.
+	
+	Each product 𝑞𝑖𝑇⋅𝑘𝑗 is divided by the square root of the dimension of the key vectors 𝑑𝑘 in order to have more stable gradients. Eventually, everything is passed through a softmax to normalize the scores:
+	$$a_{ij} = \frac{\exp(q_i^T k_j / \sqrt{d_k})}{\sum_{t=1}^{i}\exp(q_i^T k_t / \sqrt{d_k})}$$
