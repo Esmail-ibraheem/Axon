@@ -112,3 +112,17 @@ In OPT a sequence can be made of up to 2048 tokens, hence we would need 800∗2
 	Grouped-query attention(GQA) is an interpolation of multi-query and multi-head attention. It achieves a quality similar to multi-head attention while maintaining a comparable speed to multi-query attention.
 	
 	Grouped-query attention divides query heads into G-groups, each of which shares a single key head and value head. GQA-G refers to grouped-query with G groups. GQA-1, with a single group and therefore single key and value head, is equivalent to MQA, while GQA-H, with groups equal to number of heads, is equivalent to MHA. following Figure shows a comparison of grouped-query attention and multi head/multi-query attention. When converting a multi-head checkpoint to a GQA checkpoint, we construct each group key and value head by mean pooling all the original heads within that group. An intermediate number of groups leads to an interpolated model that is higher quality than MQA but faster than MHA, and, as we will show, rep resents a favorable trade-off. Going from MHA to MQA reduces H key and value heads to a single key and value head, reducing the size of the key-value cache and therefore amount of data that needs to be loaded by a factor of H. However, larger models generally scale the number of heads, such that multi-query attention represents a more aggressive cut in both memory bandwidth and capacity. GQA lets us keep the same proportional decrease in bandwidth and capacity as model size increases.
+
+<p align="center">
+  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/assets/GQA.png" alt="Your Image Description" >
+</p>
+
+Overview of grouped-query method. Multi-head attention has H query, key, and value heads. Multi-query attention shares single key and value heads across all query heads. Grouped-query attention instead shares single key and value heads for each group of query heads, interpolating between multi-head and multi-query attention.
+
+**MHA vs GQA vs MQA :**
+
+**Uptraining steps** Figure shows how performance varies with uptraining proportion for T5 XXL with MQA and GQA. First, we note that GQAalready achieves reasonable performance af ter conversion while MQA requires uptraining to be useful. Both MQA and GQA gain from 5% uptraining with diminishing returns from 10%.
+
+Time per sample for GQA-XXL as a function of the number of GQA groups with input length 2048 and output length 512. Going from 1 (MQA) to 8 groups adds modest inference overhead, with increasing cost to adding more groups.
+	
+**Number of groups**: The figure demonstrates the effect of the number of GQA groups on inference speed. For larger models, the memory bandwidth overhead from the KV cache is less con-straining (Shazeer, 2019), while the reduction in key-value size is sharper due to the increased number of heads. As a result, increasing the number of groups from MQA only results in modest slowdowns initially, with increasing costs as we move closer to MHA. We selected 8 groups as a favorable middle ground.
