@@ -145,3 +145,16 @@ Time per sample for GQA-XXL as a function of the number of GQA groups with input
 
 > MHA enables a nuanced understanding of the relationships between different parts of the input. Nevertheless, this complexity comes at a cost — a significant demand on memory bandwidth, especially during decoder inference. In multi-query attention, we average the heads for keys and values so that all query heads share the same key and value head. This is achieved by replicating the mean-pooled “head” H times, where H is the number of query heads. However, MQA is not without its drawbacks. The reduced complexity can lead to quality degradation and training instability. Grouped-query attention (GQA) is a simple approach that blends elements of multi-head attention (MHA) and multi-query attention (MQA) to create a more efficient attention mechanism.
 
+---
+
+## Acknowledgment: 
+
+**papers**:
+- [llama 2 research paper](https://arxiv.org/abs/2307.09288)
+- [attention is all you need research paper](https://arxiv.org/abs/1706.03762)
+- [Grouped Query Attention research paper](https://arxiv.org/abs/2305.13245)
+- [RoFormer: Enhanced Transformer with Rotary Position Embedding research paper](https://arxiv.org/abs/2104.09864)
+
+**other**
+- [llama from scratch](https://youtu.be/oM4VmoabDAI?si=rDegyrnSghByUEnK)
+- [huggingFace transformers lib](https://github.com/huggingface/transformers)
