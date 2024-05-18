@@ -121,7 +121,16 @@ Overview of grouped-query method. Multi-head attention has H query, key, and val
 
 **MHA vs GQA vs MQA :**
 
+<p align="center">
+  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/assets/MHA%2CGQA%2CMQA.png" alt="Your Image Description" >
+</p>
+
 **Uptraining steps** Figure shows how performance varies with uptraining proportion for T5 XXL with MQA and GQA. First, we note that GQAalready achieves reasonable performance af ter conversion while MQA requires uptraining to be useful. Both MQA and GQA gain from 5% uptraining with diminishing returns from 10%.
+
+
+<p align="center">
+  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/assets/MHA%2CGQA%2CMQA2.png" alt="Your Image Description" >
+</p>
 
 Time per sample for GQA-XXL as a function of the number of GQA groups with input length 2048 and output length 512. Going from 1 (MQA) to 8 groups adds modest inference overhead, with increasing cost to adding more groups.
 	
