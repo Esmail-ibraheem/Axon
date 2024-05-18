@@ -135,3 +135,11 @@ Overview of the grouped-query method. Multi-head attention has H query, key, and
 Time per sample for GQA-XXL as a function of the number of GQA groups with input length 2048 and output length 512. Going from 1 (MQA) to 8 groups adds modest inference overhead, with increasing cost to adding more groups.
 	
 **Number of groups**: The figure demonstrates the effect of the number of GQA groups on inference speed. For larger models, the memory bandwidth overhead from the KV cache is less con-straining (Shazeer, 2019), while the reduction in key-value size is sharper due to the increased number of heads. As a result, increasing the number of groups from MQA only results in modest slowdowns initially, with increasing costs as we move closer to MHA. We selected 8 groups as a favorable middle ground.
+
+|         MHA          |                  GQA                  |         MQA          |
+| :------------------: | :-----------------------------------: | :------------------: |
+|     High quality     | A good compromise between quality and |   Loss in quality    |
+| Computationally slow |                 speed                 | Computationally fast |
+
+> MHA enables a nuanced understanding of the relationships between different parts of the input. Nevertheless, this complexity comes at a cost — a significant demand on memory bandwidth, especially during decoder inference. In multi-query attention, we average the heads for keys and values so that all query heads share the same key and value head. This is achieved by replicating the mean-pooled “head” H times, where H is the number of query heads. However, MQA is not without its drawbacks. The reduced complexity can lead to quality degradation and training instability. Grouped-query attention (GQA) is a simple approach that blends elements of multi-head attention (MHA) and multi-query attention (MQA) to create a more efficient attention mechanism.
+
