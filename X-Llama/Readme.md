@@ -91,13 +91,13 @@ Note two things:
 
  That is why the key and value vectors of existing tokens are often cached for generating future tokens. This approach leads to what is called the **KV cache**. Note that the KV cache of one token depends on all its previous tokens, hence if we have the same token appearing in two different positions inside the sequence, the corresponding KV caches will be different as well.
 
-	![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/f26ff8fe-2964-4bc2-89e3-610781ffa02c)
+![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/f26ff8fe-2964-4bc2-89e3-610781ffa02c)
 
 
  **How much memory does KV cache use?**
 
 Let’s consider a 13B parameter [OPT model](https://arxiv.org/pdf/2205.01068.pdf)
-$memory\_usage\_per\_token = num\_vectors * hidden\_state\_size * num\_layers * precision\_(bytes) = 2 * 5120 * 40 * 2 = 800KB$
+$$memory\_usage\_per\_token = num\_vectors * hidden\_state\_size * num\_layers * precision\_(bytes) = 2 * 5120 * 40 * 2 = 800KB$$
 
 where num_vectors refers to the key and value vectors.
 
