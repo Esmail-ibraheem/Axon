@@ -84,7 +84,7 @@ Instead, when we get to compute the remaining tokens 𝑃(𝑥𝑛+𝑡+1|𝑥1
 
  The 𝐾 and 𝑉 matrices contain information about all the sequence, while the query vector contains just the information about the last token. The dot product between 𝑞 and 𝐾 corresponds to doing attention between the last token (i.e. “blue” in our example) and all the previous ones.
 
-	Note two things:
+Note two things:
 	- during the sequence generation one token at a time, the two matrices 𝐾 and 𝑉 do not change very much
 	- once we computed the embedding for the new token, it’s not going to change, no matter how many more tokens we generate
 
@@ -92,9 +92,9 @@ Instead, when we get to compute the remaining tokens 𝑃(𝑥𝑛+𝑡+1|𝑥1
 
  **How much memory does KV cache use?**
 
-	Let’s consider a 13B parameter [OPT model](https://arxiv.org/pdf/2205.01068.pdf)
-	$memory\_usage\_per\_token = num\_vectors * hidden\_state\_size * num\_layers * precision\_(bytes) = 2 * 5120 * 40 * 2 = 800KB$
-	
-	where num_vectors refers to the key and value vectors.
-	
-	In OPT a sequence can be made of up to 2048 tokens, hence we would need 800∗2048≈1.6GB per single request.
+Let’s consider a 13B parameter [OPT model](https://arxiv.org/pdf/2205.01068.pdf)
+$memory\_usage\_per\_token = num\_vectors * hidden\_state\_size * num\_layers * precision\_(bytes) = 2 * 5120 * 40 * 2 = 800KB$
+
+where num_vectors refers to the key and value vectors.
+
+In OPT a sequence can be made of up to 2048 tokens, hence we would need 800∗2048≈1.6GB per single request.
