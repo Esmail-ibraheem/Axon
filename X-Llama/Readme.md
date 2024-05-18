@@ -31,7 +31,7 @@
 	 - **Relative Position Encoding**
 	 
 		Relative positional encodings, on the other hand, deals with **two tokens** at a time and it is involved when we calculate the attention: since the attention mechanism captures the “intensity” of how much two words are related two each other, relative positional encodings tells the attention mechanism the distance between the two words involved in it. So, given two tokens, we create a vector that represents their distance.
-		[Shaw et al. (2018)](https://arxiv.org/abs/1803.02155)) incorporated relative positional information into 𝑊^𝑘 and 𝑊^𝑣. Maximum relative position is clipped to a maximum absolute value of $𝑘$ and this clipping operation enables the model to generalize to unseen sequence lengths. Therefore, 2𝑘+1 unique edge labels are considered and let us denote $\mathbf{P}^k, \mathbf{P}^v \in \mathbb{R}^{2k+1}$ as learnable relative position representations.
+		[Shaw et al. (2018)](https://arxiv.org/abs/1803.02155)) incorporated relative positional information into 𝑊^𝑘 and 𝑊^𝑣. Maximum relative position is clipped to a maximum absolute value of 𝑘 and this clipping operation enables the model to generalize to unseen sequence lengths. Therefore, 2𝑘+1 unique edge labels are considered.
 		$$A_{ij}^k = P^k_{\text{clip}(j - i, k)} \quad
 A_{ij}^v = P^v_{\text{clip}(j - i, k)} \quad
 \text{where }\text{clip}(x, k) = \text{clip}(x, -k, k)$$
@@ -41,7 +41,7 @@ A_{ij}^v = P^v_{\text{clip}(j - i, k)} \quad
 		
 		Rotary position embedding (_RoPE_; [Su et al. 2021](https://arxiv.org/abs/2104.09864)) encodes the absolution position with a [rotation matrix](https://en.wikipedia.org/wiki/Rotation_matrix) and multiplies key and value matrices of every attention layer with it to inject relative positional information at every layer.
 		
-		When encoding relative positional information into the inner product of the $𝑖-th$ key and the 𝑗-th query, we would like to formulate the function in a way that the inner product is only about the relative position 𝑖−𝑗. Rotary Position Embedding (RoPE) makes use of the rotation operation in Euclidean space and frames the relative position embedding as simply rotating feature matrix by an angle proportional to its position index.
+		When encoding relative positional information into the inner product of the 𝑖-th key and the 𝑗-th query, we would like to formulate the function in a way that the inner product is only about the relative position 𝑖−𝑗. Rotary Position Embedding (RoPE) makes use of the rotation operation in Euclidean space and frames the relative position embedding as simply rotating feature matrix by an angle proportional to its position index.
 		
 		Given a vector 𝑧, if we want to rotate it counterclockwise by 𝜃, we can multiply it by a rotation matrix to get 𝑅𝑧 where the rotation matrix 𝑅 is defined as:
 	![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/a959cf9a-50fc-4db6-be5c-1d383f69f2cb)
