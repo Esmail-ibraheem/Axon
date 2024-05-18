@@ -80,6 +80,8 @@ Instead, when we get to compute the remaining tokens 𝑃(𝑥𝑛+𝑡+1|𝑥1
 **In the process we described above**, one can notice that the key and value vectors 𝑘1,…,𝑘𝑛+𝑡−1 and 𝑣1,…,𝑣𝑛+𝑡−1 seem to be re-computed every time a new token is taken into consideration. Of course, this would be a waste of resources.
 
  Consider the below illustration:
+ 	![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/7e12fe2c-b230-4e92-9765-7e2f9bf15f0f)
+
 
  The 𝐾 and 𝑉 matrices contain information about all the sequence, while the query vector contains just the information about the last token. The dot product between 𝑞 and 𝐾 corresponds to doing attention between the last token (i.e. “blue” in our example) and all the previous ones.
 
@@ -88,6 +90,9 @@ Note two things:
 	- once we computed the embedding for the new token, it’s not going to change, no matter how many more tokens we generate
 
  That is why the key and value vectors of existing tokens are often cached for generating future tokens. This approach leads to what is called the **KV cache**. Note that the KV cache of one token depends on all its previous tokens, hence if we have the same token appearing in two different positions inside the sequence, the corresponding KV caches will be different as well.
+
+	![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/f26ff8fe-2964-4bc2-89e3-610781ffa02c)
+
 
  **How much memory does KV cache use?**
 
