@@ -43,7 +43,6 @@ A_{ij}^v = P^v_{\text{clip}(j - i, k)} \quad
 		
 		Given a vector 𝑧, if we want to rotate it counterclockwise by 𝜃, we can multiply it by a rotation matrix to get 𝑅𝑧 where the rotation matrix 𝑅 is defined as:
 	![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/a959cf9a-50fc-4db6-be5c-1d383f69f2cb)
-	![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/9f05f971-206b-43dc-ba82-e249616772b4)
 When generalizing to higher dimensional space, RoPE divide the 𝑑-dimensional space into 𝑑/2 subspaces and constructs a rotation matrix 𝑅 of size 𝑑×𝑑 for token at position 𝑖:
 ![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/4708c8a1-78ac-433d-89f5-56e6768dd840)
 where in the paper we have Θ=𝜃𝑖=10000−2(𝑖−1)/𝑑,𝑖∈[1,2,…,𝑑/2]. Note that this is essentially equivalent to sinusoidal positional encoding but formulated as a rotation matrix.
