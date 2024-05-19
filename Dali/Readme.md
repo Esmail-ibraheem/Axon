@@ -23,3 +23,17 @@ Diffusion models are inspired by **non-equilibrium thermodynamics**. They define
 diffusion models consists of two processes as shown in the image below:
 - Forward process (with red lines).
 - Reverse process (with blue lines).
+
+As mentioned above, a Diffusion Model consists of a **forward process** (or **diffusion process**), in which a datum (generally an image) is progressively noised, and a **reverse process** (or **reverse diffusion process**), in which noise is transformed back into a sample from the target distribution.
+
+In a bit more detail for images, the set-up consists of 2 processes:
+
+- a fixed (or predefined) forward diffusion process q of our choosing, that gradually adds Gaussian noise to an image, until you end up with pure noise
+- a learned reverse denoising diffusion process p_θ​, where a neural network is trained to gradually denoise an image starting from pure noise, until you end up with an actual image.
+
+## 1. Forward Process (Fixed):
+
+The sampling chain transitions in the forward process can be set to conditional Gaussians when the noise level is sufficiently low. Combining this fact with the Markov assumption leads to a simple parameterization of the forward process:
+
+$$ q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \quad
+q(\mathbf{x}_{1:T} \vert \mathbf{x}_0) = \prod^T_{t=1} q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) $$
