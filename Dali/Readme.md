@@ -35,5 +35,16 @@ In a bit more detail for images, the set-up consists of 2 processes:
 
 The sampling chain transitions in the forward process can be set to conditional Gaussians when the noise level is sufficiently low. Combining this fact with the Markov assumption leads to a simple parameterization of the forward process:
 
-$$q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \quad
-q(\mathbf{x}_{1:T} \vert \mathbf{x}_0) = \prod^T_{t=1} q(\mathbf{x}_t \vert \mathbf{x}_{t-1})$$
+![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/30cadd66-f266-45da-9b8d-7d3a4583f5ff)
+
+Where beta_1, ..., beta_T is a variance schedule (either learned or fixed) which, if well-behaved, **ensures that** x_T **is nearly an isotropic Gaussian for sufficiently large T**.
+The data sample f{x}_0  gradually loses its distinguishable features as the step t becomes larger. Eventually when T to infty, is equivalent to an isotropic Gaussian distribution.
+
+## 2. Reverse Process (Learned)
+
+As mentioned previously, the "magic" of diffusion models comes in the **reverse process** During training, the model learns to reverse this diffusion process in order to generate new data. Starting with the pure Gaussian noise, the model learns the joint distribution as
+
+Ultimately, the image is asymptotically transformed to pure Gaussian noise. The **goal** of training a diffusion model is to learn the **reverse** process - i.e. training. By traversing backwards along this chain, we can generate new data.
+
+$$p_\theta(\mathbf{x}_{0:T}) = p(\mathbf{x}_T) \prod^T_{t=1} p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) \quad
+p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \boldsymbol{\mu}_\theta(\mathbf{x}_t, t), \boldsymbol{\Sigma}_\theta(\mathbf{x}_t, t))$$
