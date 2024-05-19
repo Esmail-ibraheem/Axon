@@ -1,4 +1,4 @@
-# [Diffusion models](https://arxiv.org/abs/2006.11239)
+# [Diffusion models](https://arxiv.org/abs/2006.11239), [Original repo](https://github.com/Esmail-ibraheem/Dali)
 
 First, we need to define What is a generative model? 
 
