@@ -89,7 +89,7 @@ def apply_rotary_embeddings(x: torch.Tensor, freqs_complex: int, device:str):
 
 def repeat_kv(x:torch.Tensor, n_rep: int):
     batch_size, seq_len, n_kv_heads, head_dim = x.shape 
-    if n_rep == 1:
+    if n_rep == 1: 
         return x
     return (
         x[:, :, :, None, :]
