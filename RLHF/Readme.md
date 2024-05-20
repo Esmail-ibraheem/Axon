@@ -32,3 +32,19 @@
 - A move towards the meat will result in a reward of +100 
 
 **Policy:** a policy rules how the agent selects the action to perform given the state it is in: $a_𝑡 \sim \pi(\cdot | 𝑠𝑡)$ The goal in RL is to select a policy that maximizes the expected return
+
+![RL1](https://github.com/Esmail-ibraheem/Axon/assets/113830751/4ba3fb44-61ac-4e48-b6f7-396a64c2aa72)
+
+**The RL setup: connection to language models** 
+
+**Agent:** the language model itself State: the prompt (input tokens) 
+
+**Action:** which token is selected as the next token 
+
+**Reward model:** the language model should be rewarded for generating “good responses” and should not receive any reward for generating “bad responses”. 
+
+**Policy:** In the case of language models, the policy is the language model itself! Because it models the probability of the action space given the current state of the agent: $a_𝑡 \sim \pi(\cdot | 𝑠𝑡)$
+
+---
+
+## History: RLHF for decision making
