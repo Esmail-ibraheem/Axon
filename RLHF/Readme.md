@@ -1,4 +1,5 @@
-# [Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2312.14925), [PPO](https://arxiv.org/abs/1707.06347), [DPO](https://arxiv.org/abs/2305.18290)
+# [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
+## [Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2312.14925), [PPO](https://arxiv.org/abs/1707.06347), [DPO](https://arxiv.org/abs/2305.18290)
 
 - ##### Proximal Policy Optimization algorithm
 - ##### Direct Preference Optimization algorithm
