@@ -202,8 +202,7 @@ This is an expectation, which means we can approximate it with a sample mean by 
 
 **Algorithm** The surrogate losses from the previous sections can be computed and differentiated with a minor change to a typical policy gradient implementation. For implementations that use automatic differentation, one simply constructs the loss $L^{CLIP}$ or $L^{KLPEN}$ instead of $L^{PG}$, and one performs multiple steps of stochastic gradient ascent on this objective. Most techniques for computing variance-reduced advantage-function estimators make use a learned state-value function $V (s)$; for example, generalized advantage estimation [Sch+15a], or the 4 finite-horizon estimators in [Mni+16]. If using a neural network architecture that shares parameters between the policy and value function, we must use a loss function that combines the policy surrogate and a value function error term. This objective can further be augmented by adding an entropy bonus to ensure sufficient exploration, as suggested in past work [Wil92; Mni+16]. Combining these terms, we obtain the following objective, which is (approximately) maximized each iteration: 
 
-$$L_{t}^{CLIP+VF+S}(θ) = \hat{E}_t[L_{t}^{CLIP}(θ)- c_1L_{t}^{VF}(θ)+ c_2S[\pi_\theta](s_t)]  
-$$ 
+$$L_{t}^{CLIP+VF+S}(θ) = \hat{E}_t[L_{t}^{CLIP}(θ)- c_1L_{t}^{VF}(θ)+ c_2S[\pi_\theta](s_t)]$$ 
 where $c1,c2$ are coefficients, and S denotes an entropy bonus, and $L_{t}^{VF}$ is a squared-error loss $(V_θ(s_t) − V_{t}^{targ})^2$.
 
 
