@@ -202,9 +202,30 @@ This is an expectation, which means we can approximate it with a sample mean by 
 
 **Algorithm** The surrogate losses from the previous sections can be computed and differentiated with a minor change to a typical policy gradient implementation. For implementations that use automatic differentation, one simply constructs the loss $L^{CLIP}$ or $L^{KLPEN}$ instead of $L^{PG}$, and one performs multiple steps of stochastic gradient ascent on this objective. Most techniques for computing variance-reduced advantage-function estimators make use a learned state-value function $V (s)$; for example, generalized advantage estimation [Sch+15a], or the 4 finite-horizon estimators in [Mni+16]. If using a neural network architecture that shares parameters between the policy and value function, we must use a loss function that combines the policy surrogate and a value function error term. This objective can further be augmented by adding an entropy bonus to ensure sufficient exploration, as suggested in past work [Wil92; Mni+16]. Combining these terms, we obtain the following objective, which is (approximately) maximized each iteration: 
 
-$$L_{t}^{CLIP+VF+S}(θ) = \hat{E}_t[L_{t}^{CLIP}(θ)- c_1L_{t}^{VF}(θ)+ c_2S[\pi_\theta](s_t)]$$ 
-where $c1,c2$ are coefficients, and S denotes an entropy bonus, and $L_{t}^{VF}$ is a squared-error loss $(V_θ(s_t) − V_{t}^{targ})^2$.
+![image](https://github.com/Esmail-ibraheem/Axon/assets/113830751/a64ce3e8-8bb3-492d-9f9c-0f61d46065b9)
 
+where c1,c2 are coefficients, and S denotes an entropy bonus, and $L_{t}^{VF}$ is a squared-error loss $(V_θ(s_t) − V_{t}^{targ})^2$.
+
+![Pasted image 20240429153634](https://github.com/Esmail-ibraheem/Axon/assets/113830751/468a0b77-f82f-4077-bd1d-1816ced7f270)
+
+
+A proximal policy optimization (**PPO**) algorithm that uses **fixed-length trajectory** segments is shown below. Each iteration, each of **N** (parallel) actors collect **T** timesteps of data. Then we construct the surrogate loss on these **NT** timesteps of data, and optimize it with minibatch **SGD** (or usually for better performance, Adam [KB14]), for K epochs.
+
+![Pasted image 20240501133952](https://github.com/Esmail-ibraheem/Axon/assets/113830751/18c7a3fe-04d9-4a4e-a1ff-fc8fb49c7eea)
+
+### RLHF-Direct Preference Optimization algorithm:
+
+![Pasted image 20240430135953](https://github.com/Esmail-ibraheem/Axon/assets/113830751/74de5375-ab9b-4566-af77-202625ab5012)
+
+**Figure:** DPO optimizes for human preferences while avoiding reinforcement learning. Existing methods for fine-tuning language models with human feedback first fit a reward model to a dataset of prompts and human preferences over pairs of responses, and then use RL to find a policy that maximizes the learned reward. In contrast, DPO directly optimizes for the policy best satisfying the preferences with a simple classification objective, fitting an implicit reward model whose corresponding optimal policy can be extracted in closed form.
+
+>In this paper, we show how to directly optimize a language model to adhere to human preferences, without explicit reward modeling or reinforcement learning. We propose Direct Preference Optimization (DPO), an algorithm that implicitly optimizes the same objective as existing RLHF algorithms (reward maximization with a KL-divergence constraint) but is simple to implement and straight forward to train. Intuitively, the DPO update increases the relative log probability of preferred to dispreferred responses, but it incorporates a dynamic, per-example importance weight that prevents the model degeneration that we find occurs with a naive probability ratio objective. Like existing algorithms, DPO relies on a theoretical preference model (such as the Bradley-Terry model; [5]) that measures how well a given reward function aligns with empirical preference data. However, while existing methods use the preference model to define a preference loss to train a reward model and then train a policy that optimizes the learned reward model, DPO uses a change of variables to define the preference loss as a function of the policy directly. Given a dataset of human preferences over model responses, DPO can therefore optimize a policy using a simple binary cross entropy objective, producing the optimal policy to an implicit reward function fit to the preference data. 
+>
+>Our main contribution is Direct Preference Optimization (DPO), a simple RL-free algorithm for training language models from preferences. Our experiments show that DPO is at least as effective as existing methods, including PPO-based RLHF, for learning from preferences in tasks such as sentiment modulation, summarization, and dialogue, using language models with up to 6B parameters.
+
+Motivated by the challenges of applying reinforcement learning algorithms on large-scale problems such as fine-tuning language models, our goal is to derive a simple approach for policy optimization using preferences directly. Unlike prior RLHF methods, which learn a reward and then optimize it via RL, our approach leverages a particular choice of reward model parameterization that enables extraction of its optimal policy in closed form, without an RL training loop. As we will describe next in detail, our key insight is to leverage an analytical mapping from reward functions to optimal policies, which enables us to transform a loss function over reward functions into a loss function over policies. This change-of-variables approach avoids fitting an explicit, standalone reward model, while still optimizing under existing models of human preferences, such as the Bradley-Terry model. In essence, the policy network represents both the language model and the (implicit) reward.
+
+**Deriving the DPO objective.** We start with the same RL objective as prior work, Eq. 3, under a general reward function r. Following prior work [29, 28, 17, 15], it is straightforward to show that the optimal solution to the KL-constrained reward maximization objective in Eq. 3 takes the form:
 
 
 
