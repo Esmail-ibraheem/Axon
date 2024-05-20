@@ -228,6 +228,15 @@ Motivated by the challenges of applying reinforcement learning algorithms on lar
 **Deriving the DPO objective.** We start with the same RL objective as prior work, Eq. 3, under a general reward function r. Following prior work [29, 28, 17, 15], it is straightforward to show that the optimal solution to the KL-constrained reward maximization objective in Eq. 3 takes the form:
 
 
+$$π_r(y | x) = \frac{1}{Z(x)} π_{ref}(y | x)exp (\frac1βr(x,y)),$$
+where $Z(x) = \sum_y π_{ref}(y | x) exp (\frac1βr(x,y))$ is the partition function. See Appendix A.1 for a complete derivation. Even if we use the MLE estimate rϕ of the ground-truth reward function r∗, it is still expensive to estimate the partition function Z(x) [17, 15], which makes this representation hard to utilize in practice. However, we can rearrange Eq. 4 to express the reward function in terms of its corresponding optimal policy πr, the reference policy πref, and the unknown partition function Z(·). Specifically, we first take the logarithm of both sides of Eq. 4 and then with some algebra we obtain:
+
+$$r(x,y) = βlog \frac {π_r(y | x)} {π_{ref}(y | x)} + β logZ(x).$$
+
+Wecan apply this reparameterization to the ground-truth reward r∗ and corresponding optimal model π∗. Fortunately, the Bradley-Terry model depends only on the difference of rewards between two completions, i.e.,$p∗(y_1 ≻ y_2 | x) = σ(r∗(x,y_1) − r∗(x,y_2)).$ Substituting the reparameterization in Eq. 5 for r∗(x,y) into the preference model Eq. 1, the partition function cancels, and we can express the human preference probability in terms of only the optimal policy π∗ and reference policy πref. Thus, the optimal RLHF policy π∗ under the Bradley-Terry model satisfies the preference model:
+
+$$p∗(y_1 ≻ y_2 | x) = \frac 1  {1 +exp (βlog\frac {π^*(y_2|x)} {π_{ref}(y_2|x)} − β log \frac{π^∗(y_1|x)} {π_{ref}(y_1|x)})}$$
+The derivation is in Appendix A.2. While Eq. 6 uses the Bradley-Terry model, we can similarly derive expressions under the more general Plackett-Luce models [30, 21], shown in Appendix A.3. Nowthat we have the probability of human preference data in terms of the optimal policy rather than the reward model, we can formulate a maximum likelihood objective for a parametrized policy πθ. Analogous to the reward modeling approach (i.e. Eq. 2), our policy objective becomes:
 
 
 
