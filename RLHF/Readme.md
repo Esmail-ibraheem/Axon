@@ -1,4 +1,4 @@
-# Reinforcement Learning from Human Feedback:
+![Pasted image 20240501144245](https://github.com/Esmail-ibraheem/Axon/assets/113830751/488e32be-f784-4c11-9b54-6f558ca3a220)# Reinforcement Learning from Human Feedback:
 
 - ##### Proximal Policy Optimization algorithm
 - ##### Direct Preference Optimization algorithm
@@ -244,6 +244,16 @@ The derivation is in Appendix A.2. While Eq. 6 uses the Bradley-Terry model, we 
 
 where $\hat r_θ(x,y) = β log \frac{πθ(y|x)}{π_{ref}(y|x)}$ is the reward implicitly defined by the language model $π_θ$ and reference model $π_{ref}$. the gradient of the loss function $L_{DPO}$ increases the likelihood of the preferred completions yw and decreases the likelihood of dispreferred completions $y_l$. Importantly, the examples are weighed by how much higher the implicit reward model $\hat r_θ$ rates the dispreferred completions, scaled by β, i.e, how incorrectly the implicit reward model orders the completions, accounting for the strength of the KL constraint. Our experiments suggest the importance of this weighting, as a naïve version of this method without the weighting coefficient can cause the language model to degenerate
 
-**DPOoutline.** The general DPO pipeline is as follows: 1) Sample completions $y_1,y_2 ∼ π_{ref}(· | x)$ for every prompt x, label with human preferences to construct the offline dataset of preferences $D ={x^{(i)},y^{(i)}_w ,y_l)^{(i)}}^{N} _{i=1} and 2)$ optimize the language model $π_θ$ to minimize $L_{DPO}$ for the given πref and D and desired β. In practice, one would like to reuse preference datasets publicly available, rather than generating samples and gathering human preferences. Since the preference datasets are sampled using πSFT, we initialize $π_{ref}$ = $π_{SFT}$ whenever available. However, when $π_{SFT}$ is not available, we initialize $π_{ref}$ by maximizing likelihood of preferred completions $(x,y_w)$, that is, $π_{ref} = argmax_π E_{x,y_w}∼D [logπ(y_w | x)]$. This procedure helps mitigate the distribution shift between the true reference distribution which is unavailable, and πref used by DPO.
+**DPOoutline.** The general DPO pipeline is as follows: 1) Sample completions $y_1,y_2 ∼ π_{ref}(· | x)$ for every prompt x, label with human preferences to construct the offline dataset of preferences $D ={x^{(i)},y^{(i)}_w ,y_l)^{(i)}}^{N} _{i=1}$ and 2)optimize the language model π_θ to minimize L_{DPO} for the given πref and D and desired β. In practice, one would like to reuse preference datasets publicly available, rather than generating samples and gathering human preferences. Since the preference datasets are sampled using πSFT, we initialize $π_{ref}$ = $π_{SFT}$ whenever available. However, when $π_{SFT}$ is not available, we initialize $π_{ref}$ by maximizing likelihood of preferred completions $(x,y_w)$, that is, $π_{ref} = argmax_π E_{x,y_w}∼D [logπ(y_w | x)]$. This procedure helps mitigate the distribution shift between the true reference distribution which is unavailable, and πref used by DPO.
+
+![Pasted image 20240501144218](https://github.com/Esmail-ibraheem/Axon/assets/113830751/bf142482-5507-44b4-8015-a8e6adb65fdc)
+![Pasted image 20240501144222](https://github.com/Esmail-ibraheem/Axon/assets/113830751/af6c3025-1ff4-4b6e-8b2f-21a6b2142163)
+![Pasted image 20240501144245](https://github.com/Esmail-ibraheem/Axon/assets/113830751/56ac960c-6fa8-4fd8-98f6-abf876514db9)
+
+> [!Hint] **DPO-algorithm in a simple way**
+> - Sample good/bad response, -
+> - Run pairs through 2 models (active and reference), 
+> - Backprop, 
+> - Profit
 
 
