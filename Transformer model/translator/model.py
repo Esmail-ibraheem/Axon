@@ -1,6 +1,6 @@
 #LlTRA = Language to Language Transformer model.
 import math
-import torch 
+import torch  
 import torch.nn as nn
 
 class InputEmbeddingsLayer(nn.Module): 
