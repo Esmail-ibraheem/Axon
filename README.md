@@ -18,3 +18,5 @@ Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative 
 ## Axon's Packages:
 - [Transformer model](https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model)
 - [X-Llama](https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama)
+- [DDPM](https://github.com/Esmail-ibraheem/Axon/tree/main/Dali)
+- 
