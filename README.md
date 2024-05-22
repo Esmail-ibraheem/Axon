@@ -26,7 +26,7 @@ Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative 
 - [X-Llama](https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama)
   - X-Llama is an advanced language model framework, inspired by the original Llama model but enhanced with additional features such as Grouped Query Attention (GQA), Multi-Head Attention (MHA), and more. This project aims to provide a flexible and extensible platform for experimenting with various attention mechanisms and building state-of-the-art natural language processing models.
 
-project structure: The model was constructed in approximately ~500 lines of code, and you have the model's configuration.
+project structure: The [model](https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/X-Llama/model.py) was constructed in approximately ~500 lines of code, and you have the model's [configuration](https://github.com/Esmail-ibraheem/Axon/blob/main/X-Llama/X-Llama/config.py).
 ```
 X-Llama/
 │
