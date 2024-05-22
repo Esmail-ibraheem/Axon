@@ -44,7 +44,7 @@ X-Llama/
 └── inference
 
 ```
-- [DDPM](https://github.com/Esmail-ibraheem/Axon/tree/main/Dali)
+- [DDPM](https://github.com/Esmail-ibraheem/Axon/tree/main/Dali) \
   - Diffusion Models are generative models, meaning that they are used to generate data similar to the data on which they are trained. Fundamentally, Diffusion Models work by destroying training data through the successive addition of Gaussian noise and then learning to recover the data by reversing this noising process. After training, we can use the Diffusion Model to generate data by simply passing randomly sampled noise through the learned denoising process. Diffusion models are inspired by non-equilibrium thermodynamics. They define a Markov chain of diffusion steps to slowly add random noise to data and then learn to reverse the diffusion process to construct desired data samples from the noise. Unlike VAE or flow models, diffusion models are learned with a fixed procedure and the latent variable has high dimensionality (same as the original data).
 - [InstructGPT](https://github.com/Esmail-ibraheem/Axon/tree/main/RLHF)
   - AI alignment: A large language model typically is pre-trained on a massive amount of data, for example, the entire Wikipedia and billions of web pages. This gives the language model a vast “knowledge” of information to complete any prompt in a reasonable way. However, to use an LLM as a chat assistant (for example ChatGPT) we want to force the language model to follow a particular style. For example, we may want the following:
