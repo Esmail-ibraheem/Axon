@@ -24,5 +24,25 @@ Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative 
 - [Transformer model](https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model)
    - **Abstract.** The Transformer neural network is a powerful deep learning model that was introduced in a landmark paper titled "attention is all you need" by Vaswani et al. in 2017. It revolutionized the field of natural language processing (NLP) and has since found applications in various other domains. The Transformer architecture is based on the concept of attention, enabling it to capture long-range dependencies and achieve state-of-the-art performance on a wide range of tasks. The transformer is a neural network component that can be used to learn useful represen tations of sequences or sets of data-points [Vaswani et al., 2017]. The transformer has driven recent advances in natural language processing [Devlin et al., 2019], computer vision [Dosovitskiy et al., 2021], and spatio-temporal modelling [Bi et al., 2022].
 - [X-Llama](https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama)
+  - X-Llama is an advanced language model framework, inspired by the original Llama model but enhanced with additional features such as Grouped Query Attention (GQA), Multi-Head Attention (MHA), and more. This project aims to provide a flexible and extensible platform for experimenting with various attention mechanisms and building state-of-the-art natural language processing models.
+
+project structure: The model was constructed in approximately ~500 lines of code, and you have the model's configuration.
+```
+X-Llama/
+│
+├── images/
+│
+├── models/
+│   ├── attentions/
+│   ├── rotary_embeddings/
+│   └── transformer/
+│
+├── model
+│
+└── config
+│
+└── inference
+
+```
 - [DDPM](https://github.com/Esmail-ibraheem/Axon/tree/main/Dali)
 - [InstructGPT](https://github.com/Esmail-ibraheem/Axon/tree/main/RLHF)
