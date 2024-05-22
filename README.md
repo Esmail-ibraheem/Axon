@@ -7,7 +7,14 @@ Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative 
 ---
 
 ## Papers implemented:
-- RLHF
-- 
+- attention is all you need.
+- InstructGPT.
+- Llama.
+- Multi-Head attention.
+- Multi-Query attention.
+- Grouped-Query attention.
+- reinforcement learning from human feedback.
 
-### [Transformer model](https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model)
+## Axon's Packages:
+- [Transformer model](https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model)
+- 
