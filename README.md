@@ -85,7 +85,7 @@ first to install the repo:
 https://github.com/Esmail-ibraheem/Axon.git
 ```
 
-then you have this built tree:
+Then you have this built tree. Check the README file for each package to gain a better understanding.:
 ```
 Axon/
 │
@@ -93,11 +93,13 @@ Axon/
 │   ├── transformer/
 │   ├── translator/
 │   └── assets/
+|   └── Readme.md
 |
 ├── X-Llama/
 │   ├── models/
 │   ├── X-Llama/
 │   └── assets/
+|   └── Readme.md
 │
 ├── Dali/
 |   
