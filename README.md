@@ -17,6 +17,22 @@ Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative 
 - Multi-Query attention.
 - Grouped-Query attention.
    - > Multi-query attention (MQA), which only uses a single key-value head, drastically speeds up decoder inference. However, MQA can lead to quality degradation, and moreover it may not be desirable to train a separate model just for faster inference. We (1) propose a recipe for uptraining existing multi-head language model checkpoints into models with MQA using 5% of original pre-training compute, and (2) introduce grouped-query attention (GQA), a generalization of multi-query attention which uses an intermediate (more than one, less than number of query heads) number of key-value heads. We show that uptrained GQA achieves quality close to multi-head attention with comparable speed to MQA.
+```
+      ┌───┐┌───┐┌───┐┌───┐     ┌───┐    ┌───┐             ┌───┐
+      │ v ││ v ││ v ││ v │     │ v │    │ v │             │ v │
+      └───┘└───┘└───┘└───┘     └───┘    └───┘             └───┘
+        │    │    │    │         │        │                 │
+      ┌───┐┌───┐┌───┐┌───┐     ┌───┐    ┌───┐             ┌───┐
+      │ k ││ k ││ k ││ k │     │ k │    │ k │             │ k │
+      └───┘└───┘└───┘└───┘     └───┘    └───┘             └───┘
+        │    │    │    │      ┌──┴──┐  ┌──┴──┐      ┌────┬──┴─┬────┐
+      ┌───┐┌───┐┌───┐┌───┐  ┌───┐┌───┐┌───┐┌───┐  ┌───┐┌───┐┌───┐┌───┐
+      │ q ││ q ││ q ││ q │  │ q ││ q ││ q ││ q │  │ q ││ q ││ q ││ q │
+      └───┘└───┘└───┘└───┘  └───┘└───┘└───┘└───┘  └───┘└───┘└───┘└───┘
+      ◀️──────────────────▶️  ◀️──────────────────▶️  ◀️──────────────────▶️
+              MHA                    GQA                   MQA
+        n_query_groups=4       n_query_groups=2      n_query_groups=1
+```
 - reinforcement learning from human feedback.
   - > A promising approach to improve the robustness and exploration in Reinforcement Learning is collecting human feedback and that way incorporating prior knowledge of the target environment. It is, however, often too expensive to obtain enough feedback of good quality. To mitigate the issue, we aim to rely on a group of multiple experts (and non-experts) with different skill levels to generate enough feedback. Such feedback can therefore be inconsistent and infrequent. In this paper, we build upon prior work -- Advise, a Bayesian approach attempting to maximise the information gained from human feedback -- extending the algorithm to accept feedback from this larger group of humans, the trainers, while also estimating each trainer's reliability. We show how aggregating feedback from multiple trainers improves the total feedback's accuracy and make the collection process easier in two ways. Firstly, this approach addresses the case of some of the trainers being adversarial. Secondly, having access to the information about each trainer reliability provides a second layer of robustness and offers valuable information for people managing the whole system to improve the overall trust in the system. It offers an actionable tool for improving the feedback collection process or modifying the reward function design if needed. We empirically show that our approach can accurately learn the reliability of each trainer correctly and use it to maximise the information gained from the multiple trainers' feedback, even if some of the sources are adversarial.
 
