@@ -82,6 +82,7 @@ X-Llama/
 ## Usage:
 first to install the repo:
 ```
+https://github.com/Esmail-ibraheem/Axon.git
 ```
 
 then you have this built tree:
@@ -98,7 +99,7 @@ Axon/
 │   ├── X-Llama/
 │   └── assets/
 │
-├── Dali
+├── Dali/
 |   
 │
 └── RLHF (InstructGPT)/
