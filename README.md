@@ -76,3 +76,32 @@ X-Llama/
      - Do not use offensive language
      - Do not use racist expressions
      - Answer questions using a particular style The goal of AI alignment is to align the model’s behavior with a desired behavior.
+
+---
+
+## Usage:
+first to install the repo:
+```
+```
+
+then you have this built tree:
+```
+Axon/
+│
+├── Transformer model/
+│   ├── transformer/
+│   ├── translator/
+│   └── assets/
+|
+├── X-Llama/
+│   ├── models/
+│   ├── X-Llama/
+│   └── assets/
+│
+├── Dali
+|   
+│
+└── RLHF (InstructGPT)/
+│
+└── 
+```
