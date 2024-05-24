@@ -141,4 +141,21 @@ I built this AI research lab, Axon, as an ecosystem for implementing research pa
 - [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
 - [Reinforcement Learning from Human Feedback survey](https://arxiv.org/abs/2312.14925)
 
+**packages with their papers implemented:**
+┌───────────────┐        ┌───────────────┐        ┌───────────────┐        ┌───────────────┐
+│  Transformer  │        │    X-Llama    │        │      Dali     │        │  InstructGPT  │
+└───────┬───────┘        └───────┬───────┘        └───────┬───────┘        └───────┬───────┘
+        │                        │                        │                        │
+        │                        │                        │                        │
+        ▼                        ▼                        ▼                        ▼
+┌───────────────────┐   ┌───────────────────────────┐   ┌───────────────────┐   ┌────────────────────────┐
+│ "Attention is All │   │ "Llama2"                  │   │ "DDPM"            │   │ "RLHF Survey"          │
+│ You Need"         │   │ "RoFormer"                │   │                   │   │ "PPO"                  │
+│                   │   │ "GQA"                     │   │                   │   │ "DPO"                  │
+│                   │   │ "Attention is All         │   │                   │   │                        │
+│                   │   │ You Need"                 │   │                   │   │                        │
+└───────────────────┘   └───────────────────────────┘   └───────────────────┘   └────────────────────────┘
+
+
+
 ---
