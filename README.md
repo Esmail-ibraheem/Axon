@@ -114,7 +114,7 @@ Axon/
 
 ## Citation
 ```BibTex
-@misc{Gumaan2024-X-Llama,
+@misc{Gumaan2024-Axon,
   title   = "Axon",
   author  = "Gumaan, Esmail",
   howpublished = {\url{https://github.com/Esmail-ibraheem/Axon}},
