@@ -128,7 +128,7 @@ Axon/
 
 
 ## Notes and Acknowledgments:
-I built this AI research lab, Axon, as an ecosystem for implementing research papers on topics ranging from transformers and x-Llama to diffusion models. The lab also focuses on understanding the theoretical and mathematical aspects of the research, as detailed in the README file for each package. This project contains multiple packages, each offering different implementations of various papers.
+I built this AI research lab, Axon, as an ecosystem for implementing research papers on topics ranging from transformers and x-Llama to diffusion models. The lab also focuses on understanding the theoretical and mathematical aspects of the research, as detailed in the README file for each package. This project contains multiple packages, each offering different implementations of various papers. If you want to add an implementation of a research paper, please make a pull request. This project is open to implementations of more papers.
 
 **papers**:
 - [llama 2 research paper](https://arxiv.org/abs/2307.09288)
