@@ -142,6 +142,8 @@ I built this AI research lab, Axon, as an ecosystem for implementing research pa
 - [Reinforcement Learning from Human Feedback survey](https://arxiv.org/abs/2312.14925)
 
 **packages with their papers implemented:**
+
+```
 ┌───────────────┐        ┌───────────────┐        ┌───────────────┐        ┌───────────────┐
 │  Transformer  │        │    X-Llama    │        │      Dali     │        │  InstructGPT  │
 └───────┬───────┘        └───────┬───────┘        └───────┬───────┘        └───────┬───────┘
@@ -155,7 +157,7 @@ I built this AI research lab, Axon, as an ecosystem for implementing research pa
 │                   │   │ "Attention is All         │   │                   │   │                        │
 │                   │   │ You Need"                 │   │                   │   │                        │
 └───────────────────┘   └───────────────────────────┘   └───────────────────┘   └────────────────────────┘
-
+```
 
 
 ---
