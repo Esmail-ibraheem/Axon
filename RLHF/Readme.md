@@ -4,7 +4,7 @@
 - ##### Proximal Policy Optimization algorithm
 - ##### Direct Preference Optimization algorithm
 - ##### Supervised Fine-tuning 
- 
+  
 **AI alignment:** A large language model typically is pretrained on a massive amount of data, for example the entire Wikipedia and billions of web pages. This gives the language model a vast “knowledge” of information to complete any prompt in a reasonable way. However, to use an LLM as a chat assistant (for example ChatGPT) we want to force the language model to follow a particular style. For example, we may want the following: 
 
 - Do not use offensive language 
