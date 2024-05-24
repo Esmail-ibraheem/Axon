@@ -110,3 +110,16 @@ Axon/
 │
 └── NN.jpg
 ```
+---
+
+## Citation
+```BibTex
+@misc{Gumaan2024-X-Llama,
+  title   = "Axon",
+  author  = "Gumaan, Esmail",
+  howpublished = {\url{https://github.com/Esmail-ibraheem/Axon}},
+  year    = "2024",
+  month   = "May",
+  note    = "[Online; accessed 2024-05-24]",
+}
+```
