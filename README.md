@@ -126,7 +126,6 @@ Axon/
 
 ---
 
-Sure, here's a revised version of your sentence for clarity and readability:
 
 ## Notes and Acknowledgments:
 I built this AI research lab, Axon, as an ecosystem for implementing research papers on topics ranging from transformers and x-Llama to diffusion models. The lab also focuses on understanding the theoretical and mathematical aspects of the research, as detailed in the README file for each package. This project contains multiple packages, each offering different implementations of various papers.
