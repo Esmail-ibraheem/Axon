@@ -123,3 +123,23 @@ Axon/
   note    = "[Online; accessed 2024-05-24]",
 }
 ```
+
+---
+
+Sure, here's a revised version of your sentence for clarity and readability:
+
+## Notes and Acknowledgments:
+I built this AI research lab, Axon, as an ecosystem for implementing research papers on topics ranging from transformers and x-Llama to diffusion models. The lab also focuses on understanding the theoretical and mathematical aspects of the research, as detailed in the README file for each package. This project contains multiple packages, each offering different implementations of various papers.
+
+**papers**:
+- [llama 2 research paper](https://arxiv.org/abs/2307.09288)
+- [attention is all you need research paper](https://arxiv.org/abs/1706.03762)
+- [Grouped Query Attention research paper](https://arxiv.org/abs/2305.13245)
+- [RoFormer: Enhanced Transformer with Rotary Position Embedding research paper](https://arxiv.org/abs/2104.09864)
+- [InstructGPT](https://arxiv.org/abs/2203.02155)
+- [Proximal Policy Optimization algorithm](https://arxiv.org/abs/1707.06347)
+- [Direct Perfernces Optimization algorithm](https://arxiv.org/abs/2305.18290)
+- [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
+- [Reinforcement Learning from Human Feedback survey](https://arxiv.org/abs/2312.14925)
+
+---
