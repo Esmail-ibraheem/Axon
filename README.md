@@ -152,6 +152,8 @@ I built this AI research lab, Axon, as an ecosystem for implementing research pa
 - [attention is all you need research paper](https://arxiv.org/abs/1706.03762)
 - [Grouped Query Attention research paper](https://arxiv.org/abs/2305.13245)
 - [RoFormer: Enhanced Transformer with Rotary Position Embedding research paper](https://arxiv.org/abs/2104.09864)
+- [RMSNorm](https://arxiv.org/abs/1910.07467)
+- [Easy and Efficient Transformer](https://arxiv.org/abs/2104.12470)
 - [InstructGPT](https://arxiv.org/abs/2203.02155)
 - [Proximal Policy Optimization algorithm](https://arxiv.org/abs/1707.06347)
 - [Direct Perfernces Optimization algorithm](https://arxiv.org/abs/2305.18290)
