@@ -58,7 +58,7 @@ Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative 
 │ "Attention is All │   │ "Llama2"                  │   │ "DDPM"            |   │ "RLHF Survey"          │
 │ You Need"         │   │ "RoFormer"                │   └───────────────────┘   │ "PPO"                  │
 └───────────────────┘   │ "GQA"                     │                           │ "DPO"                  │
-                        │ "Attention is All         │                           └────────────────────────┘                        │
+                        │ "Attention is All         │                           └────────────────────────┘                        
                         │ You Need"                 |                                                  
                         │ "KV-cache", RMSNorm       |                                                   
                         └───────────────────────────┘                           
