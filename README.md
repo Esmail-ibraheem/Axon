@@ -1,6 +1,10 @@
 
 # <p align="center"> Axon: AI research Lab.🔬 </p>
 <p align="center"> <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/NN.jpg" alt="Your Image Description" width="250" height=250"></p> 
+<p align="center">
+✅ <a href="https://example.com/flash-attention" style="text-decoration:none;color:green;">flash attention</a>    ✅ <a href="https://example.com/lora" style="text-decoration:none;color:green;">LoRA</a>                  ✅ <a href="https://example.com/adapter" style="text-decoration:none;color:green;">Adapter</a><br>
+✅ <a href="https://example.com/quantization" style="text-decoration:none;color:green;">Quantization</a>       ✅ <a href="https://example.com/gpt-kernels" style="text-decoration:none;color:green;">GPT_kernels for GPUs</a>  ✅ <a href="https://example.com/sentiment-analysis" style="text-decoration:none;color:green;">sentiment analysis</a>     
+</p>
 
 Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative platform for implementing cutting-edge AI research papers and conducting novel research in various areas of artificial intelligence. Our mission is to bridge the gap between theoretical research and practical applications by providing high-quality, reproducible implementations of seminal and contemporary AI papers: InstructGPT, llama, transformers, diffusion models, RLHF, etc...
  
