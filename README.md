@@ -16,7 +16,7 @@
   <a href="https://pytorch.org/">
     <img src="https://img.shields.io/badge/Framework-PyTorch-EE4C2C" alt="PyTorch">
   </a>
-  <a href="https://github.com/your-repo/releases">
+  <a href="https://github.com/Esmail-ibraheem/Axon">
     <img src="https://img.shields.io/badge/Download-Releases-blue" alt="Download Releases">
   </a>
 </p>
