@@ -13,6 +13,9 @@
   <a href="https://en.wikipedia.org/wiki/Shell_script">
     <img src="https://img.shields.io/badge/Language-Shell_Script-lightgrey" alt="Shell Script">
   </a>
+  <a href="https://pytorch.org/">
+    <img src="https://img.shields.io/badge/Framework-PyTorch-EE4C2C" alt="PyTorch">
+  </a>
 </p>
 
 Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative platform for implementing cutting-edge AI research papers and conducting novel research in various areas of artificial intelligence. Our mission is to bridge the gap between theoretical research and practical applications by providing high-quality, reproducible implementations of seminal and contemporary AI papers: InstructGPT, llama, transformers, diffusion models, RLHF, etc...
