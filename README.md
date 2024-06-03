@@ -116,7 +116,7 @@ X-Llama/
 ---
 
 ## Usage:
-first to install the repo:
+first to download the repo:
 ```
 https://github.com/Esmail-ibraheem/Axon.git
 ```
