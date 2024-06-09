@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/Package-trasnformer%20package-yellow" alt="Transformer Package">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama">
-    <img src="https://img.shields.io/badge/Package-Xllama%20package-brightyellow" alt="Xllama Package">
+    <img src="https://img.shields.io/badge/Package-Xllama%20package-gray" alt="Xllama Package">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Dali">
     <img src="https://img.shields.io/badge/Package-Dali%20package-brightyellow" alt="Dali Package">
