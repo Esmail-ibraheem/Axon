@@ -4,20 +4,14 @@
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model">
     <img src="https://img.shields.io/badge/Package-trasnformer%20package-brightyellow" alt="Transformer Package">
   </a>
-  <a href="#LoRA">
-    <img src="https://img.shields.io/badge/Feature-LoRA-brightgreen" alt="LoRA">
+  <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama">
+    <img src="https://img.shields.io/badge/Package-Xllama%20package-brightyellow" alt="Xllama Package">
   </a>
-  <a href="#Adapter">
-    <img src="https://img.shields.io/badge/Feature-Adapter-brightgreen" alt="Adapter">
+  <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Dali">
+    <img src="https://img.shields.io/badge/Package-Dali%20package-brightyellow" alt="Dali Package">
   </a>
-  <a href="#Quantization">
-    <img src="https://img.shields.io/badge/Feature-Quantization-brightgreen" alt="Quantization">
-  </a>
-  <a href="#GPT_kernels-for-GPUs">
-    <img src="https://img.shields.io/badge/Feature-GPT_kernels%20for%20GPUs-brightgreen" alt="GPT Kernels for GPUs">
-  </a>
-  <a href="#Sentiment-Analysis">
-    <img src="https://img.shields.io/badge/Feature-Sentiment%20Analysis-brightgreen" alt="Sentiment Analysis">
+  <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/RLHF">
+    <img src="https://img.shields.io/badge/Package-InstructGPT%20package-brightyellow" alt="InstructGPT Package">
   </a>
 </p>
 
