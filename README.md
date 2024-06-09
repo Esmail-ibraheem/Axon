@@ -2,16 +2,16 @@
 # <p align="center"> Axon: AI research Lab.🔬 </p>
 <p align="center">
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model">
-    <img src="https://img.shields.io/badge/Package-trasnformer%20package-yellow" alt="Transformer Package">
+    <img src="https://img.shields.io/badge/Package-trasnformer%20{ackage-yellow" alt="Transformer Package">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama">
-    <img src="https://img.shields.io/badge/Package-Xllama%20package-blue" alt="Xllama Package">
+    <img src="https://img.shields.io/badge/Package-Xllama%20Package-blue" alt="Xllama Package">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Dali">
-    <img src="https://img.shields.io/badge/Package-Dali%20package-yellow" alt="Dali Package">
+    <img src="https://img.shields.io/badge/Package-Dali%20Package-yellow" alt="Dali Package">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/RLHF">
-    <img src="https://img.shields.io/badge/Package-InstructGPT%20package-blue" alt="InstructGPT Package">
+    <img src="https://img.shields.io/badge/Package-InstructGPT%20Package-blue" alt="InstructGPT Package">
   </a>
 </p>
 
