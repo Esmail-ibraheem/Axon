@@ -8,10 +8,10 @@
     <img src="https://img.shields.io/badge/Package-Xllama%20package-blue" alt="Xllama Package">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Dali">
-    <img src="https://img.shields.io/badge/Package-Dali%20package-brightyellow" alt="Dali Package">
+    <img src="https://img.shields.io/badge/Package-Dali%20package-yellow" alt="Dali Package">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/RLHF">
-    <img src="https://img.shields.io/badge/Package-InstructGPT%20package-brightyellow" alt="InstructGPT Package">
+    <img src="https://img.shields.io/badge/Package-InstructGPT%20package-blue" alt="InstructGPT Package">
   </a>
 </p>
 
