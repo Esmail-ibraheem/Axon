@@ -2,10 +2,11 @@
   <header>
     <nav class="common-padding flex flex-row justify-between items-center">
       <p class="text-xl font-logo group flex-center w-14">
-        <a
+        <router-link
+          to="/"
           class="tracking-normal font-normal-system group-hover:!font-black-system group-hover:tracking-[.20em] transition-[letter-spacing] duration-500 ease-in-out"
           href="#"
-          >Axon</a
+          >Axon</router-link
         >
       </p>
 
