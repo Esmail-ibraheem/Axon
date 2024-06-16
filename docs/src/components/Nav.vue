@@ -3,34 +3,16 @@
     <nav class="common-padding flex flex-row justify-between items-center">
       <p class="text-xl font-logo group flex-center w-14">
         <a
-          class="tracking-normal group-hover:tracking-[.20em] transition-all duration-300"
+          class="tracking-normal font-normal-system group-hover:!font-black-system group-hover:tracking-[.20em] transition-[letter-spacing] duration-500 ease-in-out"
           href="#"
           >Axon</a
         >
       </p>
 
       <ul class="flex gap-5">
-        <span
-          class="flex gap-5"
-          v-if="width > 768">
-          <li
-            v-for="p in packages"
-            :key="p.name"
-            class="nav-link">
-            <a :href="p.url">
-              {{ p.name }}
-            </a>
-          </li>
-        </span>
-
-        <span v-else>
-          <li class="nav-link">
-            <a
-              href="https://github.com/Esmail-ibraheem/Axon?tab=readme-ov-file#axons-packages">
-              Packages
-            </a>
-          </li>
-        </span>
+        <li class="nav-link">
+          <RouterLink to="/packages"> Packages </RouterLink>
+        </li>
 
         <!-- Github -->
         <li class="nav-link">
@@ -160,28 +142,8 @@
 
 <script setup>
   import { useDark, useToggle } from '@vueuse/core';
-  import { useWindowSize } from '@vueuse/core';
+  import { RouterLink } from 'vue-router';
 
-  const { width, height } = useWindowSize();
   const isDark = useDark();
   const toggleDark = useToggle(isDark);
-
-  const packages = [
-    {
-      name: 'Transformer',
-      url: 'https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model',
-    },
-    {
-      name: 'X-Llama',
-      url: 'https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama',
-    },
-    {
-      name: 'Dali',
-      url: 'https://github.com/Esmail-ibraheem/Axon/tree/main/Dali',
-    },
-    {
-      name: 'InstructGPT ',
-      url: 'https://github.com/Esmail-ibraheem/Axon/tree/main/RLHF',
-    },
-  ];
 </script>

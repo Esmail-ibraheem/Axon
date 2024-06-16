@@ -5,9 +5,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        logo: ['chillax', 'monospace'],
-      },
-    },
+        logo: ['chillax', 'monospace']
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
