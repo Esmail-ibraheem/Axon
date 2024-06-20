@@ -2,7 +2,7 @@
 # <p align="center"> Axon: AI research Lab.🔬 </p>
 <p align="center">
   <a href="https://arxiv.org/abs/2307.09288">
-    <img src="https://img.shields.io/badge/Arxiv-llama%20-red" alt="llama: 2307.09288">
+    <img src="https://img.shields.io/badge/Arxiv-llama%20-red" alt="llama:2307.09288">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama">
     <img src="https://img.shields.io/badge/Package-Xllama%20Package-blue" alt="Xllama Package">
