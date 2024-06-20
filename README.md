@@ -1,8 +1,8 @@
 
 # <p align="center"> Axon: AI research Lab.🔬 </p>
 <p align="center">
-  <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model">
-    <img src="https://img.shields.io/badge/Package-trasnformer%20Package-yellow" alt="Transformer Package">
+  <a href="https://arxiv.org/abs/2307.09288">
+    <img src="https://img.shields.io/badge/Arxiv-llama%20Arxiv-red" alt="llama">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama">
     <img src="https://img.shields.io/badge/Package-Xllama%20Package-blue" alt="Xllama Package">
