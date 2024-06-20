@@ -5,13 +5,22 @@
     <img src="https://img.shields.io/badge/Arxiv-llama paper%20-red" alt="https://arxiv.org/abs/2307.09288">
   </a>
   <a href="https://arxiv.org/abs/1706.03762">
-    <img src="https://img.shields.io/badge/Arxiv-Transformerr%20-red" alt="https://arxiv.org/abs/1706.03762">
+    <img src="https://img.shields.io/badge/Arxiv-Transformer%20-red" alt="https://arxiv.org/abs/1706.03762">
   </a>
-  <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Dali">
-    <img src="https://img.shields.io/badge/Package-Dali%20Package-yellow" alt="Dali Package">
+  <a href="https://arxiv.org/abs/2305.13245">
+    <img src="https://img.shields.io/badge/Arxiv-GQA%20-red" alt="https://arxiv.org/abs/2305.13245">
   </a>
-  <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/RLHF">
-    <img src="https://img.shields.io/badge/Package-InstructGPT%20Package-blue" alt="InstructGPT Package">
+  <a href="https://arxiv.org/abs/2104.09864">
+    <img src="https://img.shields.io/badge/RoFormer%20-red" alt="https://arxiv.org/abs/2104.09864">
+  </a>
+  <a href="https://arxiv.org/abs/2104.09864">
+    <img src="https://img.shields.io/badge/RoFormer%20-red" alt="https://arxiv.org/abs/2104.09864">
+  </a>
+  <a href="https://arxiv.org/abs/1910.07467">
+    <img src="https://img.shields.io/badge/RMSNorm%20-red" alt="https://arxiv.org/abs/1910.07467">
+  </a>
+  <a href="https://arxiv.org/abs/2104.12470">
+    <img src="https://img.shields.io/badge/Easy and Effecient Transformer%20-red" alt="https://arxiv.org/abs/2104.12470">
   </a>
 </p>
 
