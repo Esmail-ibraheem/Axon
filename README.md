@@ -15,10 +15,19 @@
   </a>
 
   <a href="https://arxiv.org/abs/1910.07467">
-    <img src="https://img.shields.io/badge/RMSNorm%20-red" alt="https://arxiv.org/abs/1910.07467">
+    <img src="https://img.shields.io/badge/Arxiv-RMSNorm%20-red" alt="https://arxiv.org/abs/1910.07467">
   </a>
   <a href="https://arxiv.org/abs/2104.12470">
-    <img src="https://img.shields.io/badge/Easy and Effecient Transformer%20-red" alt="https://arxiv.org/abs/2104.12470">
+    <img src="https://img.shields.io/badge/Arxiv-Easy and Effecient Transformer%20-red" alt="https://arxiv.org/abs/2104.12470">
+  </a>
+  <a href="https://arxiv.org/abs/2203.02155">
+    <img src="https://img.shields.io/badge/Arxiv-InstructGPT%20-red" alt="https://arxiv.org/abs/2203.02155">
+  </a>
+  <a href="https://arxiv.org/abs/1707.06347">
+    <img src="https://img.shields.io/badge/Arxiv-PPO%20-red" alt="https://arxiv.org/abs/1707.06347">
+  </a>
+  <a href="https://arxiv.org/abs/2305.18290">
+    <img src="https://img.shields.io/badge/Arxiv-DPO%20-red" alt="https://arxiv.org/abs/2305.18290">
   </a>
 </p>
 
