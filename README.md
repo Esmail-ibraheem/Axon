@@ -4,8 +4,8 @@
   <a href="https://arxiv.org/abs/2307.09288">
     <img src="https://img.shields.io/badge/Arxiv-llama paper%20-red" alt="https://arxiv.org/abs/2307.09288">
   </a>
-  <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama">
-    <img src="https://img.shields.io/badge/Package-Xllama%20Package-blue" alt="Xllama Package">
+  <a href="https://arxiv.org/abs/1706.03762">
+    <img src="https://img.shields.io/badge/Arxiv-Transformerr%20-red" alt="https://arxiv.org/abs/1706.03762">
   </a>
   <a href="https://github.com/Esmail-ibraheem/Axon/tree/main/Dali">
     <img src="https://img.shields.io/badge/Package-Dali%20Package-yellow" alt="Dali Package">
