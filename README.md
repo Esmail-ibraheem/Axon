@@ -11,11 +11,9 @@
     <img src="https://img.shields.io/badge/Arxiv-GQA%20-red" alt="https://arxiv.org/abs/2305.13245">
   </a>
   <a href="https://arxiv.org/abs/2104.09864">
-    <img src="https://img.shields.io/badge/RoFormer%20-red" alt="https://arxiv.org/abs/2104.09864">
+    <img src="https://img.shields.io/badge/Arxiv-RoFormer%20-red" alt="https://arxiv.org/abs/2104.09864">
   </a>
-  <a href="https://arxiv.org/abs/2104.09864">
-    <img src="https://img.shields.io/badge/RoFormer%20-red" alt="https://arxiv.org/abs/2104.09864">
-  </a>
+
   <a href="https://arxiv.org/abs/1910.07467">
     <img src="https://img.shields.io/badge/RMSNorm%20-red" alt="https://arxiv.org/abs/1910.07467">
   </a>
