@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from 'vue-router';
 import Home from '@/views/Home.vue';
 import Packages from '@/views/Packages.vue';
+import Package from '@/views/Package.vue';
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     name: 'packages',
     path: '/packages',
     component: Packages
+  },
+  {
+    name: 'package',
+    path: '/package/:id',
+    component: Package
   }
 ];
 

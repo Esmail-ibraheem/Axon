@@ -5,7 +5,6 @@
         <router-link
           to="/"
           class="tracking-normal font-normal-system group-hover:!font-black-system group-hover:tracking-[.20em] transition-[letter-spacing] duration-500 ease-in-out"
-          href="#"
           >Axon</router-link
         >
       </p>
