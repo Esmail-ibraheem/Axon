@@ -1,6 +1,6 @@
 <template>
   <Nav />
-  <main class="common-padding min-h-[calc(100vh-5rem)]">
+  <main class="common-padding">
     <router-view />
   </main>
 </template>
