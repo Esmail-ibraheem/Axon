@@ -12,6 +12,9 @@
 
       <ul class="flex gap-5">
         <li class="nav-link">
+          <RouterLink to="/"> Home </RouterLink>
+        </li>
+        <li class="nav-link">
           <RouterLink to="/packages"> Packages </RouterLink>
         </li>
 

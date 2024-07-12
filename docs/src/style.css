@@ -13,6 +13,15 @@
   body {
     @apply theme !transition-colors !duration-200 ease-linear;
   }
+
+  ::-moz-selection {
+    /* Code for Firefox */
+    @apply dark:bg-zinc-300 bg-zinc-900 dark:text-gray-900 text-zinc-200;
+  }
+
+  ::selection {
+    @apply dark:bg-zinc-300 bg-zinc-900 dark:text-gray-900 text-zinc-200;
+  }
 }
 
 @layer components {
@@ -20,8 +29,11 @@
     @apply flex items-center justify-center;
   }
 
-  .common-padding {
+  /* .common-padding {
     @apply px-4 py-2 sm:px-6 sm:py-4 md:px-8 md:py-6 lg:px-12 lg:py-8;
+  } */
+  .common-padding {
+    @apply px-[4%] py-6 sm:py-6  md:py-10;
   }
 
   .theme {

@@ -1,42 +1,54 @@
 <template>
-  <section class="flex items-center justify-center h-[70vh] space-y-10">
-    <div class="max-w-lg space-y-10 w-full">
-      <h1 class="text-2xl !text-start w-full text-gray-500">Packages:</h1>
-      <div class="grid grid-cols-4 gap-x-8 gap-y-2">
-        <p
-          v-for="pkg in packages"
-          :key="pkg.name"
-          class="text-start text-gray-500 hover:text-theme transition-[color] duration-300 ease-in-out">
-          <a
-            :href="pkg.url"
-            class="text-gray-500">
-            {{ pkg.name }}
-          </a>
-        </p>
-      </div>
-    </div>
+  <!-- ps-16 pt-10 pr-8 pb-10 -->
+  <section
+    class="max-h-[100%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+    <h1 class="font-logo text-lg font-bold mb-4">
+      {{ packages.length }} Packages
+    </h1>
+
+    <pre
+      class="grid gap-x-4 gap-y-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"><a v-for="(pkg, index) in packages" :key="pkg.name" :href="pkg.url" class=" opacity-60 block mr-4 hover:opacity-100 transition-opacity duration-300 ease-in-out"><span class="mr-2 opacity-75">{{ (index ).toString().padStart(2, '0') }}</span><b>{{ pkg.name }}</b></a></pre>
+
+    <h1 class="font-mono mb-2 mt-8">
+      <a
+        class="select-none opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
+        href="#"
+        target="_blank"
+        >built with {{ mode == 'dark' ? '🤍' : '🖤' }} by 𝕏: @4Hetary</a
+      >
+
+      <span class="mx-1.5 opacity-75 inline-flex select-none animate-pulse">
+        .
+      </span>
+
+      <button
+        @click="toggleDark()"
+        class="select-none opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        {{ mode }}
+      </button>
+
+      <span class="inline-block opacity-75"
+        >first commit on <time datetime="2024/04/17"></time>2024/04/17</span
+      >
+    </h1>
   </section>
 </template>
 
 <script setup>
-  import { reactive, ref } from 'vue';
+  import { onMounted, ref, watch } from 'vue';
+  import { useDark, useToggle } from '@vueuse/core';
+  import { packages } from '../data';
 
-  const packages = [
-    {
-      name: 'Transformer',
-      url: 'https://github.com/Esmail-ibraheem/Axon/tree/main/Transformer%20model'
-    },
-    {
-      name: 'X-Llama',
-      url: 'https://github.com/Esmail-ibraheem/Axon/tree/main/X-Llama'
-    },
-    {
-      name: 'Dali package',
-      url: 'https://github.com/Esmail-ibraheem/Axon/tree/main/Dali'
-    },
-    {
-      name: 'InstructGPT ',
-      url: 'https://github.com/Esmail-ibraheem/Axon/tree/main/RLHF'
-    }
-  ];
+  const mode = ref('');
+
+  const toggleDark = useToggle(useDark());
+
+  onMounted(() => {
+    mode.value = useDark().value ? 'dark' : 'light';
+  });
+
+  watch(useDark, (newVal) => {
+    console.log('useDark', newVal.value);
+    mode.value = newVal.value ? 'dark' : 'light';
+  });
 </script>
