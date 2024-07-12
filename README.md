@@ -1,9 +1,41 @@
 
 # <p align="center"> Axon: AI research Lab.🔬 </p>
-<p align="center"> <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/NN.jpg" alt="Your Image Description" width="250" height=250"></p> 
+<p align="center">
+  <a href="https://arxiv.org/abs/2307.09288">
+    <img src="https://img.shields.io/badge/Arxiv-llama paper%20-red" alt="https://arxiv.org/abs/2307.09288">
+  </a>
+  <a href="https://arxiv.org/abs/1706.03762">
+    <img src="https://img.shields.io/badge/Arxiv-Transformer%20-red" alt="https://arxiv.org/abs/1706.03762">
+  </a>
+  <a href="https://arxiv.org/abs/2305.13245">
+    <img src="https://img.shields.io/badge/Arxiv-GQA%20-red" alt="https://arxiv.org/abs/2305.13245">
+  </a>
+  <a href="https://arxiv.org/abs/2104.09864">
+    <img src="https://img.shields.io/badge/Arxiv-RoFormer%20-red" alt="https://arxiv.org/abs/2104.09864">
+  </a>
+
+  <a href="https://arxiv.org/abs/1910.07467">
+    <img src="https://img.shields.io/badge/Arxiv-RMSNorm%20-red" alt="https://arxiv.org/abs/1910.07467">
+  </a>
+  <a href="https://arxiv.org/abs/2104.12470">
+    <img src="https://img.shields.io/badge/Arxiv-Easy and Effecient Transformer%20-red" alt="https://arxiv.org/abs/2104.12470">
+  </a>
+  <a href="https://arxiv.org/abs/2203.02155">
+    <img src="https://img.shields.io/badge/Arxiv-InstructGPT%20-red" alt="https://arxiv.org/abs/2203.02155">
+  </a>
+  <a href="https://arxiv.org/abs/1707.06347">
+    <img src="https://img.shields.io/badge/Arxiv-PPO%20-red" alt="https://arxiv.org/abs/1707.06347">
+  </a>
+  <a href="https://arxiv.org/abs/2305.18290">
+    <img src="https://img.shields.io/badge/Arxiv-DPO%20-red" alt="https://arxiv.org/abs/2305.18290">
+  </a>
+</p>
+
 
 Welcome to **Axon: AI Research Lab!** This repository serves as a collaborative platform for implementing cutting-edge AI research papers and conducting novel research in various areas of artificial intelligence. Our mission is to bridge the gap between theoretical research and practical applications by providing high-quality, reproducible implementations of seminal and contemporary AI papers: InstructGPT, llama, transformers, diffusion models, RLHF, etc...
- 
+
+
+
 ---
 
 ## Papers implemented:
@@ -98,7 +130,7 @@ X-Llama/
 ---
 
 ## Usage:
-first to install the repo:
+first to download the repo:
 ```
 https://github.com/Esmail-ibraheem/Axon.git
 ```
