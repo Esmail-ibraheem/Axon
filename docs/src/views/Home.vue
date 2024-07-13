@@ -1,13 +1,10 @@
 <template>
-  <section class="h-[80dvh]">
+  <section class="absolute inset-0 h-screen common-padding pointer-events-none">
     <div
-      class="flex items-center justify-between gap-10 max-sm:flex-col-reverse h-full">
-      <div class="flex-1 space-y-10">
+      class="flex items-center justify-between max-sm:gap-4 gap-10 max-sm:flex-col-reverse h-full">
+      <div class="flex-1 max-sm:space-y-4 space-y-10">
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
-          <span
-            class="inline-block bg-gradient-to-r from-cyan-500 via-blue-700 to-purple-800 bg-clip-text text-transparent"
-            >Axon</span
-          >
+          <span class="inline-block text-fancy">Axon</span>
           <br />
           Your LabHub for Cutting-Edge AI Research and Implementation
         </h1>
@@ -15,9 +12,10 @@
           Bridging Theory and Practice in Cutting-Edge AI Research
         </p>
       </div>
-      <div class="flex-1 relative h-full flex items-center justify-center">
+      <div class="flex-1 relative h-full flex items-center justify-center
+      ">
         <div
-          class="absolute brightness-150 dark:brightness-50 inset-0 bg-layers bg-scale size-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full md:size-96 lg:size-[30rem] md:blur-3xl"></div>
+          class="absolute inset-0 brightness-150 dark:brightness-50 bg-layers bg-scale size-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full md:size-80 lg:size-[30rem] md:blur-3xl"></div>
         <Logo class="z-10 w-[50%] md:w-[65%] lg:w-[50%] bg-layers" />
       </div>
     </div>
