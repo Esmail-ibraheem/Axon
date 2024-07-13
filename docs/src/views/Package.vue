@@ -1,28 +1,22 @@
 <template>
   <!-- ps-16 pt-10 pr-8 pb-10 -->
-  <section
-    class="max-h-[100%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+  <section class="h-full flex flex-col justify-center w-[50%] mx-auto">
     <h1 class="font-logo text-lg font-bold mb-4">{{ p.name }}</h1>
 
-    <div class="w-full font-mono">
-      {{ p.description }}
-    </div>
+    <div
+      v-html="p.description"
+      class="w-full font-mono"></div>
 
-    <!-- TODO: fix the transition -->
     <div class="mt-10 group">
       <a
-        class="py-4 px-8 rounded-full group-hover:opacity-100 group-hover:rounded-md transition-all duration-300 ease-in-out opacity-85 dark:bg-gray-100 bg-zinc-950 dark:text-gray-800 text-zinc-100"
+        class="rounded-[5rem] h-[54px] px-8 py-4 uppercase leading-none transition-all duration-[250ms] ease-in-out hover:rounded-2xl ml-auto dark:bg-gray-100 bg-zinc-950 dark:text-gray-800 text-zinc-100"
         :href="p.url">
-        See more
+        Package Source Code
       </a>
     </div>
 
     <boxFooter />
   </section>
-
-  <div class="absolute bottom-10 left-10">
-    {{ p.name }}
-  </div>
 </template>
 
 <script setup lang="ts">

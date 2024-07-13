@@ -2,9 +2,9 @@
   <h1 class="font-mono mb-2 mt-8">
     <a
       class="select-none opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
-      href="#"
+      href="https://github.com/Esmail-ibraheem/Axon"
       target="_blank"
-      >built with {{ mode == 'dark' ? '🤍' : '🖤' }} by 𝕏: @4Hetary</a
+      >source-code</a
     >
 
     <span class="mx-1.5 opacity-75 inline-flex select-none animate-pulse">
@@ -17,7 +17,7 @@
       {{ mode }}
     </button>
 
-    <span class="inline-block opacity-75"
+    <span class="block opacity-75"
       >first commit on <time datetime="2024/04/17"></time>2024/04/17</span
     >
   </h1>
