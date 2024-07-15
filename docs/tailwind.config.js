@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+import plugin from 'tailwindcss';
+
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: 'class',
@@ -9,5 +10,13 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.transition-discrete': {
+          transitionBehavior: 'allow-discrete'
+        }
+      });
+    })
+  ]
 };

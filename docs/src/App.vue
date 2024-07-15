@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+  <div class="w-full min-h-[100dvh] grid grid-rows-[auto_1fr]">
     <Nav />
     <main class="common-padding">
       <router-view />

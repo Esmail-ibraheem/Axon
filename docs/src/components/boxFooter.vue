@@ -1,5 +1,5 @@
 <template>
-  <h1 class="font-mono mb-2 mt-8">
+  <h1 class="font-mono mb-2 mt-8 text-lg">
     <a
       class="select-none opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out"
       href="https://github.com/Esmail-ibraheem/Axon"
