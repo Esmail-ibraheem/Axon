@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
+    
       - uses: actions/checkout@v2
-      - name: Build Vue in docs directory
-        uses: xRealNeon/VuePagesAction@1.0.1
         working-directory: ./docs
         id: Build-Vue
+        uses: xRealNeon/VuePagesAction@1.0.1
         with:
           username: 'Hetari'
           reponame: 'Axon'
