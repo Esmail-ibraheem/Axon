@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply theme !transition-colors !duration-200 ease-linear;
+  }
+
+  ::-moz-selection {
+    /* Code for Firefox */
+    @apply dark:bg-zinc-300 bg-zinc-900 dark:text-gray-900 text-zinc-200;
+  }
+
+  ::selection {
+    @apply dark:bg-zinc-300 bg-zinc-900 dark:text-gray-900 text-zinc-200;
+  }
+}
+
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  /* .common-padding {
+    @apply px-4 py-2 sm:px-6 sm:py-4 md:px-8 md:py-6 lg:px-12 lg:py-8;
+  } */
+  .common-padding {
+    @apply px-[4%] lg:px-[10%] py-6 md:py-10 max-w-[1920px] mx-auto;
+  }
+
+  .theme {
+    @apply bg-theme text-theme;
+  }
+
+  .bg-theme {
+    @apply bg-gray-100 dark:bg-zinc-950;
+  }
+
+  .text-theme {
+    @apply text-gray-800 dark:text-zinc-100;
+  }
+
+  .nav-link {
+    @apply cursor-pointer text-gray-500 hover:text-theme transition-[color] duration-200 ease-in-out;
+  }
+
+  .bg-fancy {
+    @apply bg-gradient-to-r from-cyan-500 dark:from-cyan-400 via-blue-700 dark:via-blue-500 to-purple-800 dark:to-purple-500;
+  }
+
+  .text-fancy {
+    @apply bg-fancy bg-clip-text text-transparent;
+  }
+}
