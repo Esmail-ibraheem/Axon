@@ -6,12 +6,12 @@ import Package from '@/views/Package.vue';
 const routes = [
   {
     name: 'home',
-    path: '/',
+    path: '/Axon/',
     component: Home
   },
   {
     name: 'packages',
-    path: '/packages',
+    path: '/Axon/packages',
     component: Packages
   },
   {
