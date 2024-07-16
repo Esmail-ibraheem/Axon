@@ -16,7 +16,7 @@ const routes = [
   },
   {
     name: 'package',
-    path: '/package/:id',
+    path: '/Axon/package/:id',
     component: Package
   }
 ];

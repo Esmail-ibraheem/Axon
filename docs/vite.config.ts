@@ -1,15 +1,14 @@
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
-  publicPath: 'Axon',
+  base: '/Axon/',
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': '/src'
-      // Add more aliases if needed
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
 });
