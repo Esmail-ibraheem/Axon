@@ -52,7 +52,11 @@
     @apply cursor-pointer text-gray-500 hover:text-theme transition-[color] duration-200 ease-in-out;
   }
 
+  .bg-fancy {
+    @apply bg-gradient-to-r from-cyan-500 dark:from-cyan-400 via-blue-700 dark:via-blue-500 to-purple-800 dark:to-purple-500;
+  }
+
   .text-fancy {
-    @apply bg-gradient-to-r from-cyan-500 dark:from-cyan-400 via-blue-700 dark:via-blue-500 to-purple-800 dark:to-purple-500 bg-clip-text text-transparent;
+    @apply bg-fancy bg-clip-text text-transparent;
   }
 }
