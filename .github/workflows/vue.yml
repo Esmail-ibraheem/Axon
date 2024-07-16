@@ -11,6 +11,9 @@ jobs:
       - name: Build Vue in docs directory
         run: |
           cd docs
-          npx vue-cli-service build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - uses: xRealNeon/VuePagesAction@1.0.1
+        id: Build-Vue
+        with:
+          username: 'Hetari'
+          reponame: 'Axon'
+          token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged

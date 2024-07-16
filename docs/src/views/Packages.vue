@@ -26,7 +26,8 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { packages } from '../data';
+  // @ts-ignore
   import boxFooter from '@/components/boxFooter.vue';
 </script>
