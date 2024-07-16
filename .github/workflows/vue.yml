@@ -5,12 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
-    
       - uses: actions/checkout@v2
-        working-directory: ./docs
-        id: Build-Vue
-        uses: xRealNeon/VuePagesAction@1.0.1
-        with:
-          username: 'Hetari'
-          reponame: 'Axon'
-          token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+
+      # Now run the Vue build action from the docs directory
+      - name: Build Vue in docs directory
+        run: |
+          cd docs
+          npx vue-cli-service build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
