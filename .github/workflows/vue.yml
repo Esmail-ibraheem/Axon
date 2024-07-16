@@ -1,0 +1,16 @@
+name: Build Vue
+on: [push]
+jobs:
+  build_vue:
+    runs-on: ubuntu-latest
+    name: Build Vue
+    steps:
+      - uses: actions/checkout@v2
+
+      # Now run the Vue build action from the docs directory
+      - id: Build-Vue
+        uses: xRealNeon/VuePagesAction@1.0.1
+        with:
+          username: 'Hetari'
+          reponame: 'Axon'
+          token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
