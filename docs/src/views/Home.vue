@@ -1,5 +1,5 @@
 <template>
-  <section class="absolute inset-0 h-screen common-padding">
+  <section class="common-padding w-screen h-[80dvh]">
     <div
       class="flex items-center justify-center max-sm:gap-4 gap-10 max-sm:flex-col-reverse h-full">
       <div class="flex-1 h-full w-full content-center space-y-10">
@@ -15,7 +15,7 @@
 
         <a
           href="https://github.com/Esmail-ibraheem/Axon"
-          class="block w-fit bg-fancy text-white font-bold cursor-pointer rounded-full px-8 py-3 hover:scale-110 transition-transform duration-300 ease-in-out">
+          class="block w-fit z-50 bg-fancy text-white font-bold cursor-pointer rounded-full px-8 py-3 hover:scale-110 transition-transform duration-300 ease-in-out">
           See Source Code
         </a>
       </div>

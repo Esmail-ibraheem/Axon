@@ -2,7 +2,7 @@
   <!-- ps-16 pt-10 pr-8 pb-10 -->
 
   <section
-    class="relative h-full flex flex-col justify-center w-full sm:w-[75%] lg:w-1/2 mx-auto text-lg">
+    class="relative h-full flex flex-col justify-center lg:w-[70%] mx-auto text-lg common-padding">
     <h1 class="font-logo font-bold mb-4">Description:</h1>
 
     <h1
@@ -26,7 +26,7 @@
       v-for="i in packagesList"
       :key="i.id">
       <router-link
-        :to="`/package/${i.id}`"
+        :to="`/Axon/package/${i.id}`"
         :class="i.id >= 0 ? 'block' : 'hidden'">
         <p
           :class="i.id == p.id ? 'opacity-100' : 'opacity-0'"

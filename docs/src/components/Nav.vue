@@ -1,9 +1,9 @@
 <template>
-  <header>
-    <nav class="common-padding flex flex-row justify-between items-center">
+  <header class="z-50">
+    <nav class="common-padding flex flex-row justify-between items-center z-50">
       <p class="text-xl font-logo group flex-center w-14">
         <router-link
-          to="/"
+          to="/Axon/"
           class="tracking-normal font-normal-system group-hover:!font-black-system group-hover:tracking-[.20em] transition-[letter-spacing] duration-500 ease-in-out"
           >Axon</router-link
         >
@@ -11,10 +11,10 @@
 
       <ul class="flex gap-5">
         <li class="nav-link">
-          <RouterLink to="/"> Home </RouterLink>
+          <RouterLink to="/Axon/"> Home </RouterLink>
         </li>
         <li class="nav-link">
-          <RouterLink to="/packages"> Packages </RouterLink>
+          <RouterLink to="/Axon/packages"> Packages </RouterLink>
         </li>
 
         <!-- Github -->

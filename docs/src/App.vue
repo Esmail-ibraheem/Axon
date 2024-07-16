@@ -1,7 +1,7 @@
 <template>
   <div class="w-full min-h-[100dvh]">
     <Nav />
-    <main class="common-padding">
+    <main class="min-h-[80dvh] grid grid-rows-[1fr_auto]">
       <router-view />
     </main>
 
