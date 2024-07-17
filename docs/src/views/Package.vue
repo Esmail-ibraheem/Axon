@@ -2,7 +2,7 @@
   <!-- ps-16 pt-10 pr-8 pb-10 -->
 
   <section
-    class="relative h-full flex flex-col justify-center lg:w-[70%] mx-auto text-lg common-padding">
+    class="relative flex flex-col justify-center h-[85dvh] lg:w-[70%] mx-auto text-lg common-padding">
     <h1 class="font-logo font-bold mb-4">Description:</h1>
 
     <h1

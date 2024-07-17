@@ -1,10 +1,10 @@
 <template>
-  <section class="common-padding w-screen h-[80dvh]">
+  <section class="common-padding w-screen h-[85dvh]">
     <div
-      class="flex items-center justify-center max-sm:gap-4 gap-10 max-sm:flex-col-reverse h-full">
+      class="flex justify-between items-center max-sm:gap-4 gap-10 max-sm:flex-col-reverse h-full">
       <div class="flex-1 h-full w-full content-center space-y-10">
         <h1
-          class="text-3xl sm:text-4xl lg:text-5xl font-bold w-full text-start h-1/5 max-sm:h-1/3">
+          class="text-3xl sm:text-4xl lg:text-5xl font-bold w-full text-start h-1/4 max-sm:h-1/2">
           <p class="text-fancy">Axon</p>
           <p>
             <span
