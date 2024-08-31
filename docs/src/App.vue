@@ -1,4 +1,5 @@
 <template>
+  <Cursor />
   <div class="w-full min-h-[100dvh]">
     <Nav />
     <main class="h-full">
@@ -11,4 +12,5 @@
 
 <script setup>
   import Nav from '@/components/Nav.vue';
+  import Cursor from '@/components/Cursor.vue';
 </script>

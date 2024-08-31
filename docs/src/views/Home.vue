@@ -21,8 +21,8 @@
       </div>
 
       <div class="flex-1 relative h-full flex items-center justify-center">
-        <div
-          class="absolute inset-0 brightness-150 dark:brightness-50 bg-layers bg-scale size-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full md:size-80 lg:size-[30rem] md:blur-3xl"></div>
+        <!-- <div
+          class="absolute inset-0 brightness-150 dark:brightness-50 bg-layers bg-scale size-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full md:size-80 lg:size-[30rem] md:blur-3xl"></div> -->
         <Logo class="z-10 w-[50%] md:w-[65%] lg:w-[50%] bg-layers" />
       </div>
     </div>
