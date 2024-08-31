@@ -1,10 +1,10 @@
 <template>
-  <section class="common-padding w-screen h-[80dvh]">
+  <section class="common-padding w-screen h-[85dvh]">
     <div
-      class="flex items-center justify-center max-sm:gap-4 gap-10 max-sm:flex-col-reverse h-full">
+      class="flex justify-between items-center max-sm:gap-4 gap-10 max-sm:flex-col-reverse h-full">
       <div class="flex-1 h-full w-full content-center space-y-10">
         <h1
-          class="text-3xl sm:text-4xl lg:text-5xl font-bold w-full text-start h-1/5 max-sm:h-1/3">
+          class="text-3xl sm:text-4xl lg:text-5xl font-bold w-full text-start h-1/4 max-sm:h-1/2">
           <p class="text-fancy">Axon</p>
           <p>
             <span
@@ -21,8 +21,8 @@
       </div>
 
       <div class="flex-1 relative h-full flex items-center justify-center">
-        <div
-          class="absolute inset-0 brightness-150 dark:brightness-50 bg-layers bg-scale size-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full md:size-80 lg:size-[30rem] md:blur-3xl"></div>
+        <!-- <div
+          class="absolute inset-0 brightness-150 dark:brightness-50 bg-layers bg-scale size-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full md:size-80 lg:size-[30rem] md:blur-3xl"></div> -->
         <Logo class="z-10 w-[50%] md:w-[65%] lg:w-[50%] bg-layers" />
       </div>
     </div>

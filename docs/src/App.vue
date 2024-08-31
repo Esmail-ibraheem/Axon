@@ -1,7 +1,8 @@
 <template>
+  <Cursor />
   <div class="w-full min-h-[100dvh]">
     <Nav />
-    <main class="min-h-[80dvh] grid grid-rows-[1fr_auto]">
+    <main class="h-full">
       <router-view />
     </main>
 
@@ -11,4 +12,5 @@
 
 <script setup>
   import Nav from '@/components/Nav.vue';
+  import Cursor from '@/components/Cursor.vue';
 </script>
