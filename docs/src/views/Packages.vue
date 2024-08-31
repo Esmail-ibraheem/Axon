@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <boxFooter />
+    <boxFooter class="mr-auto" />
   </section>
 </template>
 
