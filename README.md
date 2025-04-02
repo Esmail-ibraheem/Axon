@@ -1,8 +1,6 @@
 
 # <p align="center"> Axon: AI research Lab.🔬 </p>
-<p align="center">
-  <img src="https://github.com/Esmail-ibraheem/Axon/blob/main/NN.jpg" alt="Your Image Description" width="250" height=250">
-</p>
+
 
 <p align="center">
   <a href="https://arxiv.org/abs/2307.09288">
